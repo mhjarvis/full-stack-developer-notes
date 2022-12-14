@@ -8,9 +8,23 @@ In order to take control of the look and feel of native error mesages, you need 
 
 ## The Constraint Validation API
 
-The setup is very basic. 
+The setup is very basic. The HTML: 
 
-  <input id="myInput" type="number" min="100" max="300" required>
-  <button onclick="myFunction()">OK</button>
+    <input id="myInput" type="number" min="100" max="300" required>
+    <button onclick="myFunction()">OK</button>
 
-  
+    <p id="output"></p>
+
+The JavaScript: 
+
+    function myFunction() {
+      let text;
+      if(document.getElementById("myInput").validity.rangeOverflow) {
+        text = "Value too large";
+      } else {
+        text = "Input OK";
+      }
+      document.getElementById("output").innerHTML = text;
+    }
+
+## Constraint Validation DOM Properties
