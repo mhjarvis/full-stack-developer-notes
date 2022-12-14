@@ -28,3 +28,17 @@ The JavaScript:
     }
 
 ## Constraint Validation DOM Properties
+
+| Properties              | Description |
+| ---------------         | ----------- |
+| validity                | Contains boolean properties related to the validity of an input element |
+| validationMessage       | Contains the message a browser will display when the validity is false. |
+| willValidate            | Indicates if an input element will be vlidated.
+
+## Validity Properties
+
+| Properties              | Description |
+| ---------------         | ----------- |
+| customError             | Set to true, if a custom validity mesage is set |
+| patternMismatch         | Set to true, if a custom validity message is set |
+| rangeOverflow           | Set to true, if an element's value is greater than its max attribute |
