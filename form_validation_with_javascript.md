@@ -27,6 +27,20 @@ The JavaScript can be written several ways, two of which are:
       document.getElementById("output").innerHTML = text;
     }
 
+OR:
+  <form>
+    const myInput = document.getElemntByID('myInput');
+
+    myInput.addEventListener('input', (event) => {
+      if(myInput.validity.typeMimatch) {
+        myInput.setCustomValidity("I was expecting soemething else"):;
+        myInput.reportValidity();
+      } else {
+        myInput.setCustomValidity("");
+      }
+    })
+  </form>
+  
 ## Constraint Validation DOM Properties
 
 | Properties                    | Description |
