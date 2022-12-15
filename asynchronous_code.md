@@ -20,10 +20,6 @@ Here, the 'do something' is the callback and is called whne ```myDiv``` gets cli
 
 Callbacks work, but can be troublesome if you intend to chain several of them together in a specific order. 
 
-[On Callbacks](https://github.com/maxogden/art-of-node#callbacks)
-
-## Aynchronous JavaScript
-
 Callbacks are most often used with asynchronous functions. A typical example is ```setTimeout()```. In the following, ```myFunction``` is used as a callback.
 
     setTimeout(myFunction, 3000);
@@ -31,6 +27,8 @@ Callbacks are most often used with asynchronous functions. A typical example is 
     function myFunction() {
       document.getElementById("demo").innerHTML = 'Howdy!';
     }
+
+[On Callbacks](https://github.com/maxogden/art-of-node#callbacks)
 
 ## Promises
 
