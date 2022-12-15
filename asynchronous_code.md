@@ -4,6 +4,10 @@ When running code, some functions will take longer than others (e.g. fetching da
 
 [The Odin Project - Asynchronous Code](https://www.theodinproject.com/lessons/node-path-javascript-asynchronous-code)
 
+## Resources
+
+
+
 ## Callbacks
 
 A callback function is a function passed into another function as an argument, which is then invoked inside the outer function to complete some kind of routine or action. An example: 
@@ -18,6 +22,16 @@ Callbacks work, but can be troublesome if you intend to chain several of them to
 
 [On Callbacks](https://github.com/maxogden/art-of-node#callbacks)
 
+## Aynchronous JavaScript
+
+Callbacks are most often used with asynchronous functions. A typical example is ```setTimeout()```. In the following, ```myFunction``` is used as a callback.
+
+    setTimeout(myFunction, 3000);
+
+    function myFunction() {
+      document.getElementById("demo").innerHTML = 'Howdy!';
+    }
+
 ## Promises
 
-A promise is an object that might produce a value at some point in the future.
+A promise is an object that might produce a value at some point in the future. Using promises allows us to tell our code to wait until the data is done fetching to continue. 
