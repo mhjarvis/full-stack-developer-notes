@@ -1,0 +1,17 @@
+## Introduction
+
+While HTML and CSS provide some ways to validating forms, the Contstraint Validation API provides a way to validate form on the frontend with Javascript. One of the major issues with relying on just HTML/CSS for validation is that there is no way to style the output. Another issue is the problem of browser compatibility.
+
+The goal is to get the right data, in the right format, while protecting the users' data and while protecting ourselves from faulty or malicious data.
+
+In order to take control of the look and feel of native error mesages, you need to use JavaScript. 
+
+## Resources
+
+1. [Mozilla Form Validation](https://developer.mozilla.org/en-US/docs/Learn/Forms/Form_validation)
+2. [W3 Tutorials Basic Form Validation](https://www.w3schools.com/js/js_validation.asp)
+3. [W3 Tutorials JavaScript Validaation API](https://www.w3schools.com/js/js_validation_api.asp)
+4. [OpenReplay In-depth Constraint Validation API](https://blog.openreplay.com/form-validation-using-javascript-s-constraint-validation-api)
+5. [Web Dev Constraint Validation](https://web.dev/constraintvalidation/)
+
+## The Constraint Validation API
