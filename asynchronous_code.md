@@ -13,3 +13,8 @@ A callback function is a function passed into another function as an argument, w
 Here, the 'do something' is the callback and is called whne ```myDiv``` gets clicked.
 
 Callbacks work, but can be troublesome if you intend to chain several of them together in a specific order. 
+
+[On Callbacks](https://github.com/maxogden/art-of-node#callbacks)
+
+## Promises
+
