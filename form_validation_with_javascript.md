@@ -63,3 +63,18 @@ OR:
 | ```valueMissing```            | Set to true, if an element (with a required attribute) has no value |
 | ```valid```                   | Set to true, if an element's value is valid |
 
+
+### Additional Examples
+
+Here we are checking whether a input element has no value, in which case, it will not be submitted until it contains one.
+
+    const the_title = document.getElementById('the_title');
+
+    the_title.addEventListener("input", (event) => {
+      if(the_title.validity.valueMissing) {
+        the_title.setCustomValidity("Please enter a book title");
+        the_title.reportValidity();
+      } else {
+        the_title.setCustomValidity("");
+      }
+    });
