@@ -6,6 +6,11 @@ The goal is to get the right data, in the right format, while protecting the use
 
 In order to take control of the look and feel of native error mesages, you need to use JavaScript. 
 
+## Resources
+
+1. [Mozilla Form Validation](https://developer.mozilla.org/en-US/docs/Learn/Forms/Form_validation)
+2. [W3 Tutorials JavaScript Validaation API](https://www.w3schools.com/js/js_validation_api.asp)
+
 ## The Constraint Validation API
 
 The setup is very basic. The HTML: 
