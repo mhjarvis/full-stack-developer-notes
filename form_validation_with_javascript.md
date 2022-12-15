@@ -12,6 +12,7 @@ In order to take control of the look and feel of native error mesages, you need 
 2. [W3 Tutorials Basic Form Validation](https://www.w3schools.com/js/js_validation.asp)
 3. [W3 Tutorials JavaScript Validaation API](https://www.w3schools.com/js/js_validation_api.asp)
 4. [OpenReplay In-depth Constraint Validation API](https://blog.openreplay.com/form-validation-using-javascript-s-constraint-validation-api)
+5. [Web Dev Constraint Validation](https://web.dev/constraintvalidation/)
 
 ## The Constraint Validation API
 
