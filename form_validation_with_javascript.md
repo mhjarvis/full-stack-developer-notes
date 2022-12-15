@@ -9,7 +9,8 @@ In order to take control of the look and feel of native error mesages, you need 
 ## Resources
 
 1. [Mozilla Form Validation](https://developer.mozilla.org/en-US/docs/Learn/Forms/Form_validation)
-2. [W3 Tutorials JavaScript Validaation API](https://www.w3schools.com/js/js_validation_api.asp)
+2. [W3 Tutorials Basic Form Validation](https://www.w3schools.com/js/js_validation.asp)
+3. [W3 Tutorials JavaScript Validaation API](https://www.w3schools.com/js/js_validation_api.asp)
 
 ## The Constraint Validation API
 
