@@ -6,7 +6,7 @@ When running code, some functions will take longer than others (e.g. fetching da
 
 ## Resources
 
-
+1. [Web Dev Simplified - Promises](https://www.youtube.com/watch?v=DHvZLI7Db8E)
 
 ## Callbacks
 
@@ -33,3 +33,24 @@ Callbacks are most often used with asynchronous functions. A typical example is 
 ## Promises
 
 A promise is an object that might produce a value at some point in the future. Using promises allows us to tell our code to wait until the data is done fetching to continue. 
+
+[W3 Tutorials Promises](https://www.w3schools.com/js/js_promise.asp)
+
+Example:
+
+    let p = new Promise((resolve, reject) => {
+      let a = 1 + 1;
+      if(a == 2) {
+        resolve('Success');
+      } else {
+        reject('Failed');
+      }
+    })
+
+    // Success
+
+    p.then((message) => {                               // executes on resolve
+      console.log('This is in the then ' + message);
+    }).catch((message) => {                             // executes on reject
+      console.log('This is in the catch '+ message);
+    })
