@@ -34,8 +34,6 @@ Callbacks are most often used with asynchronous functions. A typical example is 
 
 A promise is an object that might produce a value at some point in the future. Using promises allows us to tell our code to wait until the data is done fetching to continue. 
 
-[W3 Tutorials Promises](https://www.w3schools.com/js/js_promise.asp)
-
 Example:
 
     let p = new Promise((resolve, reject) => {
@@ -54,3 +52,5 @@ Example:
     }).catch((message) => {                             // executes on reject
       console.log('This is in the catch '+ message);
     })
+
+[W3 Tutorials Promises](https://www.w3schools.com/js/js_promise.asp)
