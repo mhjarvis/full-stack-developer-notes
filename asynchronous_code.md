@@ -2,11 +2,10 @@
 
 When running code, some functions will take longer than others (e.g. fetching data from servers). Asynchronous functions are types which can happen in the background while the rest of the code executes.
 
-[The Odin Project - Asynchronous Code](https://www.theodinproject.com/lessons/node-path-javascript-asynchronous-code)
-
 ## Resources
 
-1. [Web Dev Simplified - Promises](https://www.youtube.com/watch?v=DHvZLI7Db8E)
+1. [The Odin Project - Asynchronous Code](https://www.theodinproject.com/lessons/node-path-javascript-asynchronous-code)
+2. [Web Dev Simplified - Promises](https://www.youtube.com/watch?v=DHvZLI7Db8E)
 
 ## Callbacks
 
