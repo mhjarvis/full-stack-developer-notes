@@ -8,6 +8,7 @@ When running code, some functions will take longer than others (e.g. fetching da
 2. [Web Dev Simplified - Promises](https://www.youtube.com/watch?v=DHvZLI7Db8E)
 3. [You Don't Know JS: Asynchrony](https://github.com/getify/You-Dont-Know-JS/blob/1st-ed/async%20%26%20performance/ch1.md)
 4. [You Don't Know JS: Callbacks](https://github.com/getify/You-Dont-Know-JS/blob/1st-ed/async%20%26%20performance/ch2.md)
+5. [You Don't Know JS: Promises](https://github.com/getify/You-Dont-Know-JS/blob/1st-ed/async%20%26%20performance/ch3.md)
 
 ## Callbacks
 
