@@ -1,5 +1,7 @@
 ## Introduction
 
+Asynchronious functions give us the ability to get our program to continue excuting code when the program is waiting on information to be returned. 
+
 When running code, some functions will take longer than others (e.g. fetching data from servers). Asynchronous functions are types which can happen in the background while the rest of the code executes.
 
 ## Resources
