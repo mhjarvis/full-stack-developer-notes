@@ -13,8 +13,6 @@ When running code, some functions will take longer than others (e.g. fetching da
 5. [You Don't Know JS: Promises](https://github.com/getify/You-Dont-Know-JS/blob/1st-ed/async%20%26%20performance/ch3.md)
 6. 
 
-
-
 ## Callbacks
 
 A callback function is a function passed into another function as an argument, which is then invoked inside the outer function to complete some kind of routine or action. An example: 
@@ -61,3 +59,4 @@ Example:
     })
 
 [W3 Tutorials Promises](https://www.w3schools.com/js/js_promise.asp)
+
