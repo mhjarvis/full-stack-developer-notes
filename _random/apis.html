@@ -6,7 +6,20 @@
 </head>
 <body>
   <img src="#">
+
   <script>
+    const img = document.querySelector('img');      // select img element in html
+
+    fetch('https://api.giphy.com/v1/gifs/translate?api_key=QPKhJ9M8D5gOxLFBM0K05fGTXyU2nfbh&s=ryan_goslin', {mode: 'cors'})
+        .then(function(response) {
+            return response.json();
+        })
+        .then(function(response) {
+            img.src = response.data.images.original.url;
+        });
+
   </script>
+
+
 </body>
 </html>
