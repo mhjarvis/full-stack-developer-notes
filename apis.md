@@ -28,3 +28,11 @@ Using the service ```fetch```, we can make  HTP rquestion uing the following out
 ## Cross-Origin Request Sharing (CORS)
 
 When we send a fetch request to another website, it will probably fail. Cross-Origin Requests (those sent to another domain) require special haders from the remote site.
+
+With fetch, you are able to easily supply a JavaScript object for options. 
+
+  fetch('url.url.com/api', {
+    mode: 'cors'
+  });
+
+Adding the ```{mode: 'cors'}``` after the URL will take care of this problem. 
