@@ -6,17 +6,29 @@
 </head>
 <body>
   <img src="#">
+  <button type="button" id="btn">Get New GIF</button>
 
   <script>
     const img = document.querySelector('img');      // select img element in html
+    const btn = document.querySelector('#btn');      // get button elelment
 
-    fetch('https://api.giphy.com/v1/gifs/translate?api_key=QPKhJ9M8D5gOxLFBM0K05fGTXyU2nfbh&s=ryan_goslin', {mode: 'cors'})
+    test();
+
+    function test() {
+        fetch('https://api.giphy.com/v1/gifs/translate?api_key=QPKhJ9M8D5gOxLFBM0K05fGTXyU2nfbh&s=ryan_goslin', {mode: 'cors'})
         .then(function(response) {
             return response.json();
         })
         .then(function(response) {
             img.src = response.data.images.original.url;
-        });
+        });    
+    }
+
+
+
+    btn.addEventListener("click", function(){
+        test();
+    });
 
   </script>
 

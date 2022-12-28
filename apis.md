@@ -9,6 +9,9 @@ In most cases, you will also need to create an account and request access to a s
 
 1. [Odin Project Link](https://www.theodinproject.com/lessons/node-path-javascript-working-with-apis)
 2. [Cross-Origin Request Sharing - javascript.info](https://javascript.info/fetch-crossorigin)
+3. [Using the Fetch API - Mozilla](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch)
+4. [Public APIs Part 1](https://github.com/n0shake/Public-APIs)
+5. [Public APIs Part 2](https://github.com/public-apis/public-apis)
 
 ## Fetching Data
 
@@ -36,3 +39,21 @@ With fetch, you are able to easily supply a JavaScript object for options.
   });
 
 Adding the ```{mode: 'cors'}``` after the URL will take care of this problem. 
+
+## Using Fetch
+
+An example:
+
+  <body>
+    <img src="#">
+    <script>
+      const img = document.querySelector('img');      // select img element in html
+      fetch('https://api.giphy.com/v1/gifs/translate?api_key=QPKhJ9M8D5gOxLFBM0K05fGTXyU2nfbh&s=ryan_goslin', {mode: 'cors'})
+        .then(function(response) {
+            return response.json();
+        })
+        .then(function(response) {
+            img.src = response.data.images.original.url;
+        });
+    </script>
+  </body>
