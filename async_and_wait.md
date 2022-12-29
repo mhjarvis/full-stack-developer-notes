@@ -10,3 +10,22 @@ The ```await``` keyword tells JavaScript to wait for an asynchronous action to f
 
 1. [Odin Project Link](https://www.theodinproject.com/lessons/node-path-javascript-async-and-await)
 
+## Error Handling
+
+To handle errors you can just call the function and append a ```.catch()``` method to the end:
+
+    asyncFunctionCall().catch(err => {
+      console.log(err)
+    });
+
+Or, you can use the ```try/catch``` block:
+
+    asynch function getPersonInfo(name) {
+      try {
+        const people = await server.getPeople();
+        const person = people.find(person => { return person.name === name });
+        return person;
+      } catch (error) {
+          // Handle error
+      }
+    }
