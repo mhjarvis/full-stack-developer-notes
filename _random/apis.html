@@ -6,16 +6,22 @@
 </head>
 <body>
   <img src="#">
-  <button type="button" id="btn">Get New GIF</button>
+  <button type="button" id="btn" style="display: block;">Get RANDOM GIF</button>
+
+  <form class="form" action="">
+    <input type="text" placeholder="Search.." name="search" id="sbox">
+    <button type="button" id="search-btn">Search</button>
+  </form>
 
   <script>
     const img = document.querySelector('img');      // select img element in html
     const btn = document.querySelector('#btn');      // get button elelment
+    const sbtn = document.querySelector('#search-btn'); 
 
-    test();
+    test('ryan_goslin');    // initial gif
 
-    function test() {
-        fetch('https://api.giphy.com/v1/gifs/translate?api_key=QPKhJ9M8D5gOxLFBM0K05fGTXyU2nfbh&s=ryan_goslin', {mode: 'cors'})
+    function test(val) {
+        fetch(`https://api.giphy.com/v1/gifs/translate?api_key=QPKhJ9M8D5gOxLFBM0K05fGTXyU2nfbh&s=${val}`, {mode: 'cors'})
         .then(function(response) {
             return response.json();
         })
@@ -24,14 +30,16 @@
         });    
     }
 
-
-
-    btn.addEventListener("click", function(){
+    btn.addEventListener("click", function(){       // random gif
         test();
     });
 
-  </script>
+    sbtn.addEventListener('click', function() {     // search input gif
+        let searchInput = document.getElementById("sbox").value;
+        test(searchInput);
+    })
 
+  </script>
 
 </body>
 </html>
