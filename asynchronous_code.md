@@ -43,6 +43,27 @@ Callbacks are most often used with asynchronous functions. A typical example is 
 
 A promise is an object that might produce a value at some point in the future. Using promises allows us to tell our code to wait until the data is done fetching to continue. 
 
+The basic promise syntax is as follows: 
+
+    let myPromise = new Promise(function(myResolve, myReject) {
+        // "Producing Code" (May take some time)
+
+        myResolve(); // when successful
+        myReject();  // when error
+    });
+
+        // "Consuming Code" (Must wait for a fulfilled Promise)
+    myPromise.then(
+        function(value) { /* code if successful */ },
+        function(error) { /* code if some error */ }
+    );
+
+Promises have the following terminology (or, a promise can be the following):
+- fulfilled - the action relating to the promise succeeded.
+- rejected - the action relating to the promise failed.
+- pending - has not fulfilled or rejected 
+- settled - has fulfilled or rejected
+
 Example:
 
     let p = new Promise((resolve, reject) => {
