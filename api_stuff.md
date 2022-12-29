@@ -54,6 +54,9 @@ An example:
         })
         .then(function(response) {
             img.src = response.data.images.original.url;
-        });
+        })
+        .catch((error) => {
+          console.error('Error:', error);
+        });    
     </script>
   </body>
