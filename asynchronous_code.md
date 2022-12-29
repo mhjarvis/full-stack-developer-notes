@@ -1,8 +1,8 @@
 ## Introduction
 
-Asynchronious functions give us the ability to get our program to continue excuting code when the program is waiting on information to be returned. 
+Asynchronious functions give us the ability to get our program to continue excuting code when the program is waiting on some other task to complete. This will be important when working with APIs or files on servers (for example).
 
-When running code, some functions will take longer than others (e.g. fetching data from servers). Asynchronous functions are types which can happen in the background while the rest of the code executes.
+When running code, some functions will take longer than others (e.g. fetching data from servers). Asynchronous functions are types which can happen in the background while the rest of the code continuous executing.
 
 ## Resources
 
@@ -13,15 +13,18 @@ When running code, some functions will take longer than others (e.g. fetching da
 5. [You Don't Know JS: Promises](https://github.com/getify/You-Dont-Know-JS/blob/1st-ed/async%20%26%20performance/ch3.md)
 6. 
 
+## The Event Loop
+
+
 ## Callbacks
 
 A callback function is a function passed into another function as an argument, which is then invoked inside the outer function to complete some kind of routine or action. An example: 
 
-    myDiv.addEventListener("click", function() {
+    btn.addEventListener("click", function() {
       // do something
     })
 
-Here, the 'do something' is the callback and is called whne ```myDiv``` gets clicked.
+Here, the 'do something' is the callback and is called whne ```btn``` gets clicked.
 
 Callbacks work, but can be troublesome if you intend to chain several of them together in a specific order. 
 
