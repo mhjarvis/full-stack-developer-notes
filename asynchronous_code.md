@@ -15,6 +15,7 @@ When running code, some functions will take longer than others (e.g. fetching da
 
 ## The Event Loop
 
+The event loop manages code execution. 
 
 ## Callbacks
 
