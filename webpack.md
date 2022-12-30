@@ -1,5 +1,7 @@
 ## Setting Up Webpack
 
+[The Odin Project Link](https://www.theodinproject.com/lessons/node-path-javascript-restaurant-page)
+
 A. Start the project:
 
   1. Run ```npm init``` in your project directory to generate a ```package.json``` file.
