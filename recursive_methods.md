@@ -30,3 +30,10 @@ It can also be abreviated as follows:
 Javascript limits the depth recursion can go - which can be relied upon to be about 10,000. 
 
 ## The Execution Context and Stack
+
+Information about the process of a function is stored in its execution context, which is an internal data structure that contains details about the execution of a function. One function call has exactly one excution context associated with it. When a function makes a nested call, the following happens:
+
+- The current function is paused.
+- The execution context associated with it is remembered in a special data structure called execution context stack. 
+- The nested call executes.
+- Afterwards, the old excution context is retrieved from the stack, and the outer function is resumed from where it stopped.
