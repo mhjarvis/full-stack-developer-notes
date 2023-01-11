@@ -21,3 +21,12 @@ A basic example:
 
     alert( pow(2, 3) ); // 8
 
+It can also be abreviated as follows:
+
+    function pow(x, n) {
+      return (n == 1) ? x : (x * pow(x, n - 1));
+    }
+
+Javascript limits the depth recursion can go - which can be relied upon to be about 10,000. 
+
+## The Execution Context and Stack
