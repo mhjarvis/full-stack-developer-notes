@@ -35,3 +35,5 @@ C. Create a ```src``` and ```dist``` directory with the following contents:
   7. Inside of src/index.js write a simple console.log or alert statement and then run npx webpack. Load up dist/index.html in a browser to make sure everything is working correctly.
 
     Quick tip #2: if you run npx webpack --watch you will not have to rerun webpack every time you make a change.
+    
+    
