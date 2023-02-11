@@ -37,3 +37,14 @@ Information about the process of a function is stored in its execution context, 
 - The execution context associated with it is remembered in a special data structure called execution context stack. 
 - The nested call executes.
 - Afterwards, the old excution context is retrieved from the stack, and the outer function is resumed from where it stopped.
+
+Going through the function ```pow(2, 3)```, wew ultimately end up with the following context stack:
+
+    CONTEXT: { x: 2, n: 1, at line 1 } call: pow(2, 1) (because n == 1, 2 is returned)
+    CONTEXT: { x: 2, n: 2, at line 5 } call: pow(2, 2)
+    CONTEXT: { x: 2, n: 3, at line 5 } call: pow(2, 3)
+
+In this example, the recursion depth is set at 3. Note that this takes memory. A looped-based algorithm, in this case, is more memory-saving.
+
+**Any recursion can be rewritten as a loop. The loop variant usually can be made more effective.**
+
