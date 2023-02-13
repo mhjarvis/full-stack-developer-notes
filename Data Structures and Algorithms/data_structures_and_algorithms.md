@@ -21,7 +21,7 @@ Binary Search Trees are node-based binary tree data structures. They have the fo
 - The right subtree contains greater values
 - The left/right subtree must be binary search trees
 
-<img src="./images/bst-21.png">
+<img src="https://github.com/mhjarvis/full-stack-developer-guide/blob/main/Data%20Structures%20and%20Algorithms/bst-21.png?raw=true">
 
 ## Queues and Stacks
 
