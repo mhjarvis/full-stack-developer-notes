@@ -29,11 +29,11 @@ Binary Search Trees are node-based binary tree data structures. They are tree-li
 
 We can define a Binary Tree Node with the following function:
 
-  function TreeNode(val, left, right) {
-    this.val = val;
-    this.left = left;
-    this.right = right;
-  }
+    function TreeNode(val, left, right) {
+      this.val = val;
+      this.left = left;
+      this.right = right;
+    }
 
 
 ## Queues and Stacks
