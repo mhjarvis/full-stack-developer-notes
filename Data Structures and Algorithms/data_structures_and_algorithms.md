@@ -14,14 +14,27 @@ Data structures store data based on your needs. The type of data structure to us
 
 ## Binary Search
 
-## Binary Search Trees
+Time complexity: log(n)
 
-Binary Search Trees are node-based binary tree data structures. They have the following properties:
-- The left subtree contains lesser values
-- The right subtree contains greater values
-- The left/right subtree must be binary search trees
+
+
+## Binary Search Trees
+Binary Search Trees are node-based binary tree data structures. They are tree-like structures with a single root at the very top. They have the following properties:
+
+- every left child has a smaller value than its parent
+- every right child has a larger value than its parent
+- eveery node can contain from 0 to 2 children
 
 <img src="https://github.com/mhjarvis/full-stack-developer-guide/blob/main/Data%20Structures%20and%20Algorithms/bst-21.png?raw=true">
+
+We can define a Binary Tree Node with the following function:
+
+  function TreeNode(val, left, right) {
+    this.val = val;
+    this.left = left;
+    this.right = right;
+  }
+
 
 ## Queues and Stacks
 
