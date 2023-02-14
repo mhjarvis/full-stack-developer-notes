@@ -35,6 +35,58 @@ We can define a Binary Tree Node with the following function:
       this.right = right;
     }
 
+There are three ways to to traverse a Binary Tree: Inorder traversal, Postorder traversal, and Preorder traversal.
+
+#### Inorder traversal
+Uses a recursive algorithm.
+
+    /**
+    * {TreeNode} root
+    **/
+
+    const inorder = (root) => {
+      const nodes = [];
+      if(root) {
+        inorder(root.left)
+        nodes.push(root.val)
+        inorder(root.right)
+      }
+      return nodes
+    }
+  
+#### Postorder traversal
+Another recursive algorithm that visits the tree nodes from left to right to mid.
+
+    /**
+    * @param {TreeNode} root
+    **/
+    
+    const postorder = (root) => {
+      const nodes = []
+      if (root) {
+        postorder(root.left)
+        postorder(root.right)
+        nodes.push(root.val)
+      }
+      return nodes
+    }
+
+#### Preorder traversal
+A recursive algoritm that visits the tree nodes from mid to left to right.
+
+    /**
+    * @param {TreeNode} root
+    **/
+    const preorder = (root) => {
+      const nodes = []
+      if (root) {
+        nodes.push(root.val)
+        preorder(root.left)
+        preorder(root.right)
+      }
+      return nodes
+    }
+
 
 ## Queues and Stacks
 
