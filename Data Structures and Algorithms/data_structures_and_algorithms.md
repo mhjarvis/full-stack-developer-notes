@@ -142,7 +142,19 @@ A recursive algoritm that visits the tree nodes from mid to left to right.
 
 
 ## Queues and Stacks
+Stacks - think of stacks as a stack of books. When you add a book, you add it to the top of the pile; when you remove a book, you take it from the top of the pile. You can only add/remove elements from the top of the stack. Some notes: 
 
+- Elements are sorted by insertion order.
+- The last element in is first out (LIFO). 
+- Elements have no index. 
+- Can only add to top and remove from top.
+
+Queues - think of a line at the theatre. Queues have a front and back. You can only add elements to the back and can only remove from the front (queuing and dequeuing). Some notes:
+
+- Elements are sorted by insertion order.
+- First element in is first out (FIFO).
+- Elements have no index.
+- Can only add to back and remove from front.
 
 
 ## Binary Tree Traversal
