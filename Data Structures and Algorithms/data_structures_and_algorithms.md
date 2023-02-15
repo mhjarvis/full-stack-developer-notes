@@ -15,7 +15,7 @@ Data structures store data based on your needs. The type of data structure to us
 ## Binary Search
 Binary search is the 'divide and conquor' technique for searching. It is used with a sorted array. 
 
-Time complexity: O(logN)
+Time complexity: O(log n)
 
 Recursive Solution:
 
@@ -68,6 +68,8 @@ Iterative Solution:
     }
 
 ## Binary Search Trees
+Binary search trees are a type of tree data structure with the added condition that each element to the left of a node must be less than that parent node, and each element to the right of a node must be greater than that parent node. Each left and right subtree is also itself a binary search tree, which makes searching for elements more efficient.
+
 Binary Search Trees are node-based binary tree data structures. They are tree-like structures with a single root at the very top. They have the following properties:
 
 - every left child has a smaller value than its parent
@@ -140,6 +142,8 @@ A recursive algoritm that visits the tree nodes from mid to left to right.
 
 
 ## Queues and Stacks
+
+
 
 ## Binary Tree Traversal
 
