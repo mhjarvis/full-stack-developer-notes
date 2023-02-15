@@ -13,9 +13,26 @@ Data structures store data based on your needs. The type of data structure to us
 2. []()
 
 ## Binary Search
+Binary search is the 'divide and conquor' technique for searching. It is used with a sorted array. 
 
-Time complexity: log(n)
+Time complexity: O(logN)
 
+Recursive Solution:
+
+    function recursiveBinarySearch(arr, x, start, end) {
+      
+      if(start > end) return false;
+
+      let mid = Math.floor((start + end) / 2);
+
+      if(arr[mid] === x) return true;
+
+      if(arr[mid] > x) {
+        return recursiveBinarySearch(arr, x, start, mid - 1);
+      } else {
+        return recursiveBinarySearch(arr, x, mid + 1, end);
+      }
+    }
 
 
 ## Binary Search Trees
@@ -24,6 +41,8 @@ Binary Search Trees are node-based binary tree data structures. They are tree-li
 - every left child has a smaller value than its parent
 - every right child has a larger value than its parent
 - eveery node can contain from 0 to 2 children
+
+https://www.freecodecamp.org/news/binary-tree-algorithms-for-javascript-beginners/
 
 <img src="https://github.com/mhjarvis/full-stack-developer-guide/blob/main/Data%20Structures%20and%20Algorithms/bst-21.png?raw=true">
 
