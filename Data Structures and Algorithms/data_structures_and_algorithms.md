@@ -112,4 +112,9 @@ This is the process of visiting (reading/processing data) each node in the tree 
 In this type of Binary Tree Traversal, we would visit all nodes at the same level before moving on to the next level. 
 
 ### Depth-first Traversal
-In this type of Binary Tree Traversal, we would visit all children of a node before moving on.
+In this type of Binary Tree Traversal, we would visit all children of a node before moving on. How nodes can be visitited is done through three different approaches:
+
+1. Preorder - <root><left><right>
+2. Inorder - <left><root><right>
+3. Postorder - <left><right><root>
+
