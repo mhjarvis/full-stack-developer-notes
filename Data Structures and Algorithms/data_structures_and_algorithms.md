@@ -11,6 +11,7 @@ Data structures store data based on your needs. The type of data structure to us
 
 1. [The Odin Project](https://www.theodinproject.com/lessons/javascript-common-data-structures-and-algorithms)
 2. [Binary Search](https://medium.com/@jeffrey.allen.lewis/javascript-algorithms-explained-binary-search-25064b896470)
+3. [Binary Tree Traversal](https://www.youtube.com/watch?v=9RHO6jU--GU&list=RDCMUClEEsT7DkdVO_fkrBw0OTrA&start_radio=1&rv=9RHO6jU--GU&t=10)
 
 ## Binary Search
 Binary search is the 'divide and conquor' technique for searching. It is used with a sorted array. 
@@ -105,7 +106,10 @@ Queues - think of a line at the theatre. Queues have a front and back. You can o
 
 
 ## Binary Tree Traversal
+This is the process of visiting (reading/processing data) each node in the tree exactly once in some order. This can be accomplished by one of two techniques: breadth-first traversal and depth-first traversal.
 
-## Breadth-first Traversal
+### Breadth-first Traversal
+In this type of Binary Tree Traversal, we would visit all nodes at the same level before moving on to the next level. 
 
-## Depth-first Traversal
+### Depth-first Traversal
+In this type of Binary Tree Traversal, we would visit all children of a node before moving on.
