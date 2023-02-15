@@ -12,6 +12,7 @@ Data structures store data based on your needs. The type of data structure to us
 1. [The Odin Project](https://www.theodinproject.com/lessons/javascript-common-data-structures-and-algorithms)
 2. [Binary Search](https://medium.com/@jeffrey.allen.lewis/javascript-algorithms-explained-binary-search-25064b896470)
 3. [Binary Tree Traversal](https://www.youtube.com/watch?v=9RHO6jU--GU&list=RDCMUClEEsT7DkdVO_fkrBw0OTrA&start_radio=1&rv=9RHO6jU--GU&t=10)
+4. [Breadth-first Traversal](https://www.youtube.com/watch?v=86g8jAQug04)
 
 ## Binary Search
 Binary search is the 'divide and conquor' technique for searching. It is used with a sorted array. 
