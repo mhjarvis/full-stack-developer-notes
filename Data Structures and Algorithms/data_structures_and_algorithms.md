@@ -10,7 +10,7 @@ Data structures store data based on your needs. The type of data structure to us
 ## Resources
 
 1. [The Odin Project](https://www.theodinproject.com/lessons/javascript-common-data-structures-and-algorithms)
-2. []()
+2. [Binary Search](https://medium.com/@jeffrey.allen.lewis/javascript-algorithms-explained-binary-search-25064b896470)
 
 ## Binary Search
 Binary search is the 'divide and conquor' technique for searching. It is used with a sorted array. 
@@ -64,11 +64,8 @@ Iterative Solution:
         }
       }
   
-  console.log("Target value not found in array");
-}
-
-
-
+      console.log("Target value not found in array");
+    }
 
 ## Binary Search Trees
 Binary Search Trees are node-based binary tree data structures. They are tree-like structures with a single root at the very top. They have the following properties:
