@@ -34,6 +34,27 @@ Recursive Solution:
       }
     }
 
+Iterative Solution:
+
+    function iterativeBS(arr, x) {
+      
+      let start = 0;
+      let end = arr.length - 1;
+
+      while(start <= end) {
+        let mid = Math.floor((start + end) / 2);
+
+        if(arr[mid] === x) {
+          return true;
+        } else if(arr[mid] < x) {
+          start = mi + 1;
+        } else {
+          end = mid - 1;
+        }
+      }
+      return false;
+    }
+
 
 ## Binary Search Trees
 Binary Search Trees are node-based binary tree data structures. They are tree-like structures with a single root at the very top. They have the following properties:
