@@ -38,17 +38,17 @@ Iterative Solution:
 
     function iterativeBS(arr, x) {
       
-      let start = 0;
-      let end = arr.length - 1;
+      let start = 0;              // define end index
+      let end = arr.length - 1;   // define start index 
 
-      while(start <= end) {
-        let mid = Math.floor((start + end) / 2);
+      while(start <= end) {       // while loop
+        let mid = Math.floor((start + end) / 2);    // define mid index
 
-        if(arr[mid] === x) {
+        if(arr[mid] === x) {      // test for max (mid === x)
           return true;
-        } else if(arr[mid] < x) {
-          start = mi + 1;
-        } else {
+        } else if(arr[mid] < x) { // assign end index and search left side of arr
+          start = mid + 1;
+        } else {                  // search right side
           end = mid - 1;
         }
       }
