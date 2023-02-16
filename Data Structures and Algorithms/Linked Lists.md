@@ -27,4 +27,8 @@ Also remember that arrays are static data structures (it needs all of its resour
 
 ## Linked-list Shapes
 
+- Singly linked-lists - the simplest type of linked list, they go in just one direction.
+- Doubly linked-list - individual nodes also have a reference pointer to its preceding node. They contain two reference pointers.
+- Circular linked-list - this list does not end with a node pointing to a null value. Instead, it has a node that acts as the tail of the list, and the node after the tail node is the beginning of the list.
+
 <img src="images/linked_list_shape.jpeg">
