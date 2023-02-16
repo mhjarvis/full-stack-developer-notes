@@ -113,9 +113,11 @@ Queues - think of a line at the theatre. Queues have a front and back. You can o
 This is the process of visiting (reading/processing data) each node in the tree exactly once in some order. This can be accomplished by one of two techniques: breadth-first traversal and depth-first traversal.
 
 ### Breadth-first Traversal
-In this type of Binary Tree Traversal, we would visit all nodes at the same level before moving on to the next level. 
+In this type of Binary Tree Traversal, we would visit all nodes at the same level before moving on to the next level. This can be accomplished using a queue, which starts at the root, queue's its children, then visits those children while queueing any additional children, and so on.
 
-    
+Time Complexity: O(n)
+
+   
 
 
 
