@@ -1,1 +1,1 @@
-# full-stack-developer-guide
+# full-stack-developer-notes
