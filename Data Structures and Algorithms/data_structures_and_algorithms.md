@@ -20,6 +20,8 @@ Binary search is the 'divide and conquor' technique for searching. It is used wi
 Time complexity: O(log n)
 In each iteration, we are cutting the list in half. For example, a sorted list of 64 elements will take at most log2(64) = 6 iterations.
 
+<img src="https://github.com/mhjarvis/full-stack-developer-notes/blob/main/Data%20Structures%20and%20Algorithms/images/lognbinarysearch.PNG?raw=true">
+
 Recursive Solution:
 
     function recursiveBinarySearch(arr, x, start, end) {
