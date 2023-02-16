@@ -18,6 +18,7 @@ Data structures store data based on your needs. The type of data structure to us
 Binary search is the 'divide and conquor' technique for searching. It is used with a sorted array. 
 
 Time complexity: O(log n)
+In each iteration, we are cutting the list in half. For example, a sorted list of 64 elements will take at most log2(64) = 6 iterations.
 
 Recursive Solution:
 
