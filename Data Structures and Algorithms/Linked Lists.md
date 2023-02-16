@@ -20,3 +20,9 @@ A linked list is a linear collection of data elements called nodes. The nodes po
 The biggest difference between a linked list and array is the way memory is used. With arrays, memory would need to be in one, contiguous block. Linked lists, however, does not need all the memory locations to be in one place. 
 
 <img src="images/memory_management.jpeg">
+
+Also remember that arrays are static data structures (it needs all of its resources to be allocated when the structure is created) while linked lists are dynamic data structures (they can shrink and grow in memory).
+
+## Linked-list Shapes
+
+<img src="images/linked_list_shape.jpeg">
