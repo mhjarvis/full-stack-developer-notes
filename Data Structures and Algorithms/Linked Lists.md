@@ -5,6 +5,7 @@ Linked lists function very similarly to arrays. The benefits of a linked list (o
 ## Resources
 
 1. [The Odin Project](https://www.theodinproject.com/lessons/javascript-linked-lists)
+2. [What's A Linked List](https://dev.to/vaidehijoshi/whats-a-linked-list-anyway)
 
 ## Structure of a Linked List
 
@@ -13,3 +14,9 @@ A linked list is a linear collection of data elements called nodes. The nodes po
     [ NODE(head) ] -> [ NODE ] -> [ NODE(tail) ] -> null
 
 <img src="images/parts_of_linked_list.jpeg">
+
+## Memory Management
+
+The biggest difference between a linked list and array is the way memory is used. With arrays, memory would need to be in one, contiguous block. Linked lists, however, does not need all the memory locations to be in one place. 
+
+<img src="images/memory_management.jpeg">
