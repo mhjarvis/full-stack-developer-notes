@@ -2,6 +2,8 @@
 
 Linked lists function very similarly to arrays. The benefits of a linked list (over an array), is that elements can easily be inserted and removed without reallocation of any other elements (as compared to an array). Generally, since Javascript arrays are not limited to a certain size, linked lists are not really necessary.
 
+<img src="images/linear_vs_nonlinear.jpeg">
+
 ## Resources
 
 1. [The Odin Project](https://www.theodinproject.com/lessons/javascript-linked-lists)
