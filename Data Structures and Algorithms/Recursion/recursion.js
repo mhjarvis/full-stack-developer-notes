@@ -65,3 +65,9 @@ console.log('The 15th Fibonacci Number is: ' + fib(15))
 
 /* ************************************************************************* */
 
+console.log('\n5. Palindrome function:\n')
+
+// Return true/false if the string is a palindrome
+function isPalindrome() {
+    
+}
