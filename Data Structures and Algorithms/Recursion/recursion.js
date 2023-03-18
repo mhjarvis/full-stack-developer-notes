@@ -83,3 +83,8 @@ function isPalindrome(str) {
 console.log('Testing the string "d": ' + isPalindrome('d'))
 console.log('Testing the string "saippuakivikauppias": ' + isPalindrome('saippuakivikauppias'))
 console.log('Testing the string "saippuakivioauppias": ' + isPalindrome('saippuakivioauppias'))
+
+// Version 2 to the palindrome solution
+function v2Palindrom(str, start = 0, end = null) {
+
+}
