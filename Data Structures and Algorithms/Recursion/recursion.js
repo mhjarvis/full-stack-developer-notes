@@ -68,6 +68,18 @@ console.log('The 15th Fibonacci Number is: ' + fib(15))
 console.log('\n5. Palindrome function:\n')
 
 // Return true/false if the string is a palindrome
-function isPalindrome() {
-    
+function isPalindrome(str) {
+    if (str.length < 2) {                   // base case
+        return true;
+    }
+
+    if (str[0] !== str[str.length - 1]) {   // base case
+        return false;
+    }
+
+    return isPalindrome(str.slice(1, str.length - 1));    
 }
+
+console.log('Testing the string "d": ' + isPalindrome('d'))
+console.log('Testing the string "saippuakivikauppias": ' + isPalindrome('saippuakivikauppias'))
+console.log('Testing the string "saippuakivioauppias": ' + isPalindrome('saippuakivioauppias'))
