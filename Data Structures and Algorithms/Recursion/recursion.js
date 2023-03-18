@@ -43,3 +43,16 @@ function iterate(arr, index) {
 
 let array = [23, 44, 555, 34, 90, 939, 1, 93];
 iterate(array, 0);
+
+/* ************************************************************************* */
+
+console.log('\n4. Fibonacci sequence using recursion:\n')
+
+// Return the nth fibonacci number
+// fib(1) = 1, fib(2) == 2, fib(n > 2) = fib(n - 1) + fib(n - 2)
+function fib() {
+
+
+
+  
+}
