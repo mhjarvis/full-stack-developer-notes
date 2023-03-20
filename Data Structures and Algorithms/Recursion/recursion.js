@@ -94,7 +94,7 @@ function v2Palindrom(str, start = 0, end = null) {
         return true;
     } else if (end <= start) {
         return true;
-    } else if (str.charAt(start) !== str.charAt(end)) {
+    } else if (str.charAt(start).toUpperCase() !== str.charAt(end).toUpperCase()) {
         return false;
     } else {
        return v2Palindrom(str, start + 1, end - 1 )
@@ -105,3 +105,8 @@ console.log('\nVersion 2 Palindrome:')
 console.log('Testing the string "d": ' + v2Palindrom('d'))
 console.log('Testing the string "saippuakivikauppias": ' + v2Palindrom('saippuakivikauppias'))
 console.log('Testing the string "saippuakivioauppias": ' + v2Palindrom('saippuakivioauppias'))
+
+/* ************************************************************************* */
+
+console.log('\n6. Palindrome function that ignores punctuation\n')
+
