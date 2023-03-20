@@ -53,6 +53,19 @@ class Tree {
 
     // Returns true or false depending on if the tree contains a value
     contains(value) {
+        return this._contains(this.root, value);
+    }
+    _contains(node, value) {
+     
+        if (node === null) {
+            return false;
+        }
+        if (node.data === value) {
+            return true;
+        }
+
+        return this._contains(node.left, value) ||
+        this._contains(node.right, value);
 
     }
 }
