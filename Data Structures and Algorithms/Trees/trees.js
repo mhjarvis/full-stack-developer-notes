@@ -50,6 +50,11 @@ class Tree {
             this._sum(node.right);
 
     }
+
+    // Returns true or false depending on if the tree contains a value
+    contains(value) {
+
+    }
 }
 
 // Create five basic nodes
@@ -68,7 +73,11 @@ n3.right = n4;
 n4.left = n5;
 
 // Print out results of the .collect function
-console.log(tree.collect());
+console.log('\nArray of the Tree: ' + tree.collect());
 
 // Print out the sum fo all nodes in the tree
-console.log('Total equals: ' + tree.sum());
+console.log('\nTotal equals: ' + tree.sum());
+
+// Print out using the 'contains' function
+console.log('\nTree contains 99 (false) :' + tree.contains(99));
+console.log('Tree contains 44 (true) :' + tree.contains(44));
