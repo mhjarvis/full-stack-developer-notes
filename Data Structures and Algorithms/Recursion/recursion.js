@@ -117,3 +117,5 @@ console.log('Testing the string "saippuakivioauppias": ' + v2Palindrom('saippuak
 
 console.log('\n6. Palindrome function that ignores punctuation\n')
 
+
+
