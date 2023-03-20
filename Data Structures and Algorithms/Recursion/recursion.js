@@ -85,6 +85,7 @@ console.log('Testing the string "saippuakivikauppias": ' + isPalindrome('saippua
 console.log('Testing the string "saippuakivioauppias": ' + isPalindrome('saippuakivioauppias'))
 
 // Version 2 to the palindrome solution
+const ALPHABET = "QWERTYUIOPASDFGHJKLZXCVBNMqwertyuiopasdfghjklzxcvbnm";
 function v2Palindrom(str, start = 0, end = null) {
     //if no end is provided, set to the index of the last letter
     if (end === null) {
@@ -94,16 +95,22 @@ function v2Palindrom(str, start = 0, end = null) {
         return true;
     } else if (end <= start) {
         return true;
-    } else if (str.charAt(start).toUpperCase() !== str.charAt(end).toUpperCase()) {
-        return false;
     } else {
-       return v2Palindrom(str, start + 1, end - 1 )
+        let c1 = str.charAt(start).toUpperCase();
+        let c2 = str.charAt(end).toUpperCase();
+        if (c1 !== c2) {
+            return false;
+        } else if (!ALPHABET.includes(c1)) {
+            return isPalindrome(str, start + 1, end);
+        } else {
+            return isPalindrome(str, start + 1, end - 1);
+        }
     }
 }
 
 console.log('\nVersion 2 Palindrome:')
 console.log('Testing the string "d": ' + v2Palindrom('d'))
-console.log('Testing the string "saippuakivikauppias": ' + v2Palindrom('saippuakivikauppias'))
+console.log('Testing the string "saippuakivikauppias": ' + v2Palindrom('saippuaKivikauppias'))
 console.log('Testing the string "saippuakivioauppias": ' + v2Palindrom('saippuakivioauppias'))
 
 /* ************************************************************************* */
