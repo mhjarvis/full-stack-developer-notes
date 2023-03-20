@@ -13,6 +13,16 @@ class Tree {
     constructor() {
         this.root = null;
     }
+
+    // Visit every node in the tree, and add the value to the array
+    collect() {
+
+    }
+    
+    // Underscore indicates people should not use this function themselves
+    _collect(result = []) {
+
+    }
 }
 
 // Create five basic nodes
@@ -29,3 +39,6 @@ n1.left = n2;
 n1.right = n3;
 n3.right = n4;
 n4.left = n5;
+
+// Print out results of the .collect function
+console.log(tree.collect);
