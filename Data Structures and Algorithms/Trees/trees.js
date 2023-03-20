@@ -34,6 +34,22 @@ class Tree {
 
         return nodes;
     }
+
+    // Sum function to iterate through entire tree and totaling values
+    sum() {
+        return this._sum(this.root);
+    }
+
+    _sum(node) {
+        if (node === null) {
+            return 0;
+        }
+
+        return node.data + 
+            this._sum(node.left) + 
+            this._sum(node.right);
+
+    }
 }
 
 // Create five basic nodes
@@ -53,3 +69,6 @@ n4.left = n5;
 
 // Print out results of the .collect function
 console.log(tree.collect());
+
+// Print out the sum fo all nodes in the tree
+console.log('Total equals: ' + tree.sum());
