@@ -86,5 +86,9 @@ console.log('Testing the string "saippuakivioauppias": ' + isPalindrome('saippua
 
 // Version 2 to the palindrome solution
 function v2Palindrom(str, start = 0, end = null) {
-
+    //if no end is provided, set to the index of the last letter
+    if (end === null) {
+        end = str.length - 1;
+    }
+    
 }
