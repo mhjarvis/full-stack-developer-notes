@@ -39,7 +39,18 @@ class Tree {
     // Add new Node to tree
     add(data, parentData) {
         let node = new Node(data);
+        let parent = this.find(parentData);
 
+        // If the parent exists, add this node
+        if (parent) {
+            parent.children.push(node);
+            node.parent = parent;
+
+            return node;
+        }
+        else {
+            throw new Error('Cannot add node, parent with data ${parentData} not found.');
+        }
     }
 }
 
@@ -47,3 +58,5 @@ class Tree {
 let tree = new Tree('CEO');             // data: 'CEO' , parent: null, children: []
 
 tree.add('VP Sales', 'CEO');
+
+console.log(tree);
