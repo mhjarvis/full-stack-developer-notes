@@ -6,3 +6,12 @@
 
 // Breadth-First Search - starts from the root node and first traverses all the neighboring nodes.
 // Then it selects the nearest node and explores the new nodes. 
+
+// Node class holds data and links
+class Node {
+    constructor(data) {
+        this.data = data;
+        this.parent = null;
+        this.children = [];
+    }
+}
