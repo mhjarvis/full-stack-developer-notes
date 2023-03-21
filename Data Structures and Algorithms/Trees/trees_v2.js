@@ -10,8 +10,16 @@
 // Node class holds data and links
 class Node {
     constructor(data) {
-        this.data = data;
-        this.parent = null;
-        this.children = [];
+        this.data = data;               // holds the nodes data
+        this.parent = null;             // points to the parent node
+        this.children = [];             // contains all children of this node
+    }
+}
+
+// Tree class to hold actual tree and functions
+class Tree {
+    constructor(data) {
+        let node = new Node(data);      // create new instance of Node
+        this._root = node;              // assigns Node as the root of a tree
     }
 }
