@@ -22,4 +22,28 @@ class Tree {
         let node = new Node(data);      // create new instance of Node
         this._root = node;              // assigns Node as the root of a tree
     }
+
+    // Depth-First-Search - returns the node or null
+    find(data, node = this._root) {
+        if (node.data == data) {        // base case
+            return node;
+        }
+        for (let child of node.children) {
+            if (this.find(data, child))  {
+                return child;
+            }
+        }
+        return null;
+    }
+
+    // Add new Node to tree
+    add(data, parentData) {
+        let node = new Node(data);
+
+    }
 }
+
+// Create instance of Tree
+let tree = new Tree('CEO');             // data: 'CEO' , parent: null, children: []
+
+tree.add('VP Sales', 'CEO');
