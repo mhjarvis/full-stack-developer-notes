@@ -23,25 +23,67 @@ class Tree {
         if (this.root === null) {
             this.root = newNode;
         } else {
-            this.insertNode(this.root, newNode);
+            this._insertNode(this.root, newNode);
         }
     }
 
-    insertNode(currentNode, newNode) {
+    _insertNode(currentNode, newNode) {
         if (newNode.data < currentNode.data) {
             if (currentNode.left === null) {
                 currentNode.left = newNode;
             } else {
-                this.insertNode(currentNode.left, newNode);
+                this._insertNode(currentNode.left, newNode);
             }
         } else {
             if (currentNode.right === null) {
                 currentNode.right = newNode;
             } else {
-                this.insertNode(currentNode.right, newNode);
+                this._insertNode(currentNode.right, newNode);
             }
         }
     }
+
+    delete(data) {
+        this.root = this._delete(this.root, data);
+    }
+
+    _delete(currentNode, key) {
+        if (currentNode === null) {
+            return null;
+        } else if (key < currentNode.data) {
+            currentNode.left = this._delete(currentNode.left, key);
+            return currentNode;
+        } else if (key > currentNode.data) {
+            currentNode.right = this._delete(currentNode.right, key);
+            return currentNode;
+        } else {
+            if (currentNode.left === null && currentNode.right === null) {
+                currentNode = null;
+                return currentNode;
+            }
+            if (currentNode.left === null) {
+                currentNode = currentNode.right;
+                return currentNode;
+            } else if (currentNode.right === null) {
+                currentNode = currentNode.right;
+                return currentNode;
+            }
+
+            let aux = this.findMinNode(currentNode.right);
+            currentNode.data = aux.data;
+            currentNode.right = this._delete(currentNode.right, aux.data);
+            return currentNode;
+        }
+    }
+
+    findMinNode(node) {
+        if (node.left === null) {
+            return node;
+        } else {
+            return this.findMinNode(node.left);
+        }
+    }
+
 
 
 
@@ -68,6 +110,13 @@ tree.insert(79);
 tree.insert(98);
 tree.insert(93);
 tree.insert(23);
+
+prettyPrint(tree.root);
+
+console.log('\n2. Deleting values 98 and 1...\n');
+
+tree.delete(98);
+tree.delete(1);
 
 prettyPrint(tree.root);
 
