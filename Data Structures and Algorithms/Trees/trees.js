@@ -94,3 +94,36 @@ console.log('\nTotal equals: ' + tree.sum());
 // Print out using the 'contains' function
 console.log('\nTree contains 99 (false) :' + tree.contains(99));
 console.log('Tree contains 44 (true) :' + tree.contains(44));
+
+prettyPrint(tree.root);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+function prettyPrint(node, prefix = '', isLeft = true) {
+    if (node === null) {
+       return;
+    }
+    if (node.right !== null) {
+      prettyPrint(node.right, `${prefix}${isLeft ? '│   ' : '    '}`, false);
+    }
+    console.log(`${prefix}${isLeft ? '└── ' : '┌── '}${node.data}`);
+    if (node.left !== null) {
+      prettyPrint(node.left, `${prefix}${isLeft ? '    ' : '│   '}`, true);
+    }
+  }

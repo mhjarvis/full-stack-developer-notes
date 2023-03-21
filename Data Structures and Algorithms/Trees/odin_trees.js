@@ -44,45 +44,30 @@ class Tree {
     }
 
     delete(data) {
-        this.root = this._delete(this.root, data);
+        this._delete(data, this.root);
     }
 
-    _delete(currentNode, key) {
-        if (currentNode === null) {
-            return null;
-        } else if (key < currentNode.data) {
-            currentNode.left = this._delete(currentNode.left, key);
-            return currentNode;
-        } else if (key > currentNode.data) {
-            currentNode.right = this._delete(currentNode.right, key);
-            return currentNode;
-        } else {
-            if (currentNode.left === null && currentNode.right === null) {
-                currentNode = null;
-                return currentNode;
-            }
-            if (currentNode.left === null) {
-                currentNode = currentNode.right;
-                return currentNode;
-            } else if (currentNode.right === null) {
-                currentNode = currentNode.right;
-                return currentNode;
-            }
-
-            let aux = this.findMinNode(currentNode.right);
-            currentNode.data = aux.data;
-            currentNode.right = this._delete(currentNode.right, aux.data);
-            return currentNode;
+    _delete(value, current = this.root) {
+        if(current === null) {
+            return current;
         }
+
+        if(value < current.data) {
+            current.left = this._delete(value, current.left);
+        } else if(value > current.data) {
+            current.right = this._delete(value, current.right);
+        } else {
+            if(!current.right && !current.left) {
+                return null;
+            } else if(!current.right && current.left) {
+                return current.left;
+            } else if(current.right && !current.left) {
+                return current.right;
+            }
+        }
+        return current;
     }
 
-    findMinNode(node) {
-        if (node.left === null) {
-            return node;
-        } else {
-            return this.findMinNode(node.left);
-        }
-    }
 
 
 
@@ -113,8 +98,9 @@ tree.insert(23);
 
 prettyPrint(tree.root);
 
-console.log('\n2. Deleting values 98 and 1...\n');
+console.log('\n2. Deleting values 588, 98, and 1...\n');
 
+tree.delete(588);
 tree.delete(98);
 tree.delete(1);
 
