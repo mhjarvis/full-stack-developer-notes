@@ -1,5 +1,5 @@
 // Binary Search Tree Implementation
-// https://www.youtube.com/watch?v=lml2E9SIJHo&list=PLC3y8-rFHvwg6nsAOfC5Is18KB2DrVOJy&index=35
+// https://www.youtube.com/watch?v=n6_Ruq1qvjU&list=PLC3y8-rFHvwg6nsAOfC5Is18KB2DrVOJy&index=36
 
 class Node {
     constructor(value) {
@@ -63,6 +63,8 @@ class BinarySearchTree {
     }
 }
 
+/* *********************************************** OUTPUT OUTPUT OUTPUT ********************************************** */
+
 const bst = new BinarySearchTree();     // create new instance
 
 console.log('\n1. Testing if the tree is empty after initialization?', bst.isEmpty());
@@ -76,3 +78,4 @@ console.log('15: ', bst.search(bst.root, 15));
 console.log('5: ', bst.search(bst.root, 5));
 console.log('555: ', bst.search(bst.root, 555));
 console.log('10: ', bst.search(bst.root, 10));
+
