@@ -15,10 +15,23 @@ class Node {
 
 class Tree {
     constructor(arr = []) {
-        this.root = buildTree();
-        this.arr = arr;
+        this.root = this.buildTree(arr);
+    }
+
+    // Function to sort and remove duplicates of array. 
+    buildTree(arr) {
+        arr = [...new Set(arr.sort(function(a, b){return a - b}))];
+
+        if(arr.length === 0) {
+            return null;
+        }
+
+        const mid = arr[parseInt(arr.length / 2)];
+
+        console.log(mid);
+        console.log(arr);
+        
     }
 }
 
-console.log(Node);
-console.log(Tree);
+let tree = new Tree([4, 66, 24, 5, 100, 48, 24, 88, 74, 25, 64, 19])
