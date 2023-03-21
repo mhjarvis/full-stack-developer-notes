@@ -8,3 +8,17 @@ class Node {
         this.right = right;
     }
 }
+
+// Build a Tree class/factory which accepts an array when initialized. The Tree
+// class should have a root attribute which uses the return value of buildTree
+// which you'll write next.
+
+class Tree {
+    constructor(arr = []) {
+        this.root = buildTree();
+        this.arr = arr;
+    }
+}
+
+console.log(Node);
+console.log(Tree);
