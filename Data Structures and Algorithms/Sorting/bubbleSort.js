@@ -1,0 +1,18 @@
+
+let arr = [34, 22, 39, 4, 18, 384, 2 ,3, 298, 6, 43, 19, 29, 38]
+
+function bubbleSort(arr) {
+    let a = 0;
+    let b = 1;
+
+    for(let i = 0; i < arr.length - 1; i++) {
+        for(let j = 0; j < arr.length - 1; j++) {
+            if()
+        }
+    }
+}
+
+console.log('\nBubble Sort\n')
+console.log(arr)
+console.log('\nAfter Bubble Sort\n')
+console.log(bubbleSort(arr))
