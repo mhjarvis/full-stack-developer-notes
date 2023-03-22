@@ -168,6 +168,23 @@ class Tree {
             this._preOrder(fn, currentNode.right);
         }
     }
+
+    height() {
+        return this._height(this.root);
+    }
+    _height(root) {
+        if(!root) {
+            return -1;
+        }
+        let left = this._height(root.left);
+        let right = this._height(root.right);
+
+        if(left > right) {
+            return left + 1;
+        } else {
+            return right + 1;
+        }
+    }
 }
 
 let tree = new Tree();
@@ -259,7 +276,11 @@ console.log('\n...printing values from preOrder()...\n');
 
 tree.preOrder(print);
 
+/* ********************** Height Function ********************** */
 
+console.log('\n8. Height of the tree...\n');
+
+console.log(tree.height());
 
 
 
