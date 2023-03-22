@@ -69,17 +69,20 @@ class Tree {
     }
 
     find(value) {
-        this._find(value, this.root);
+        return this._find(value, this.root);
     }
 
     _find(value, currentNode) {
+        console.log(currentNode.data, value)
+        if(currentNode.data == value) {
+            return true;
+        }
 
 
 
 
 
 
-        
     }
 
 
@@ -117,7 +120,14 @@ tree.delete(1);
 
 prettyPrint(tree.root);
 
+console.log('\n3. Searching for values 34, 33, and 79...\n');
 
+console.log('Is 34 in the tree: ' +  tree.find(34));
+console.log('Is 33 in the tree: ', tree.find(33));
+console.log('Is 79 in the tree: ', tree.find(79));
+console.log();
+
+prettyPrint(tree.root);
 
 
 
