@@ -87,9 +87,12 @@ class Tree {
         }
     }
 
-    levelOrder(currentNode = this.root) {
-        let result = [];
-        let temp = [];
+    levelOrder(fn) {
+        return this._levelOrder(fn, this.root);
+    }
+    _levelOrder(fn = null, currentNode) {
+        let result = [];            // holds array of values in tree
+        let temp = [];              // hold nodes and acts as queue
         if(currentNode === null) {
             return result;
         }
@@ -100,6 +103,10 @@ class Tree {
             currentNode = temp[0];
             result.push(currentNode.data);
 
+            if(fn) {
+                fn(currentNode.data);
+            }
+
             if(currentNode.left) {
                 temp.push(currentNode.left);
             }
@@ -108,14 +115,50 @@ class Tree {
             }
             temp.shift()
         }
-
         return result;
-        
     }
 
+    inOrder(fn) {
+        return this._inOrder(fn, this.root);
+    }
+
+    _inOrder(fn, currentNode) {
+        if(!currentNode) {
+            return;
+        };
+
+
+        if(currentNode.left) {
+            this._inOrder(fn, currentNode.left);
+        }
+                fn(currentNode.data);
+
+        if(currentNode.right) {
+            this._inOrder(fn, currentNode.right);
+        }
+    }
+
+    postOrder(fn) {
+        return this._postOrder(fn, this.root);
+    }
+
+    _postOrder(fn, currentNode) {
+        if(!currentNode) {
+            return;
+        }
+        if(currentNode.left) {
+            this._inOrder(fn, currentNode.left);
+        }
+        if(currentNode.right) {
+            this._inOrder(fn, currentNode.right);
+        }
+                fn(currentNode.data);
+    }
 }
 
 let tree = new Tree();
+
+/* ********************** Create and Insert Values ********************** */
 
 console.log('\n1. Creating new tree and inserting values...\n');
 
@@ -136,6 +179,8 @@ tree.insert(23);
 
 prettyPrint(tree.root);
 
+/* ********************** Delete Values ********************** */
+
 console.log('\n2. Deleting values 588, 98, and 1...\n');
 
 tree.delete(588);
@@ -143,6 +188,8 @@ tree.delete(98);
 tree.delete(1);
 
 prettyPrint(tree.root);
+
+/* ********************** Searching for Values ********************** */
 
 console.log('\n3. Searching for values 34, 33, and 56...\n');
 
@@ -153,18 +200,40 @@ console.log();
 
 prettyPrint(tree.root);
 
+/* ********************** Level Order Traversal ********************** */
+
 console.log('\n4. Level Order...\n');
+console.log('...creating function that multiplies tree values by 2, prints the result, and passing to leveOrder...\n')
 
-console.log(tree.levelOrder())
+function times(val) {
+    console.log(val * 2);
+}
 
+tree.levelOrder(times);
 
+console.log('\n...printing array from levelOrder()...\n\n', tree.levelOrder());
 
+/* ********************** In Order Traversal ********************** */
 
+console.log('\n5. In Order...\n');
 
+console.log('\n...printing values from inOrder()...\n');
 
+function print(val) {
+    console.log(val);
+}
 
+tree.inOrder(print);
 
+/* ********************** Post Order Traversal ********************** */
 
+console.log('\n6. Post Order...\n');
+
+prettyPrint(tree.root);
+
+console.log('\n...printing values from postOrder()...\n');
+
+tree.postOrder(print);
 
 
 
