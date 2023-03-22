@@ -68,8 +68,19 @@ class Tree {
         return current;
     }
 
+    find(value) {
+        this._find(value, this.root);
+    }
+
+    _find(value, currentNode) {
 
 
+
+
+
+
+        
+    }
 
 
 
