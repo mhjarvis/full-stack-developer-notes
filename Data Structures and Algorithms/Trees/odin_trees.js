@@ -87,24 +87,30 @@ class Tree {
         }
     }
 
-    levelOrder(fn, currentNode = this.root) {
+    levelOrder(currentNode = this.root) {
         let result = [];
-        if(currentNode = null) {
-            return;
+        let temp = [];
+        if(currentNode === null) {
+            return result;
         }
 
-        result.push(currentNode);
-        while(result != []) {
-            current = result[0];
-            console.log(fn(current.data));
-            if(current.left) {
-                result.push(current.left);
+        temp.push(currentNode);
+
+        while(temp.length != 0){
+            currentNode = temp[0];
+            result.push(currentNode.data);
+
+            if(currentNode.left) {
+                temp.push(currentNode.left);
             }
-            if(current.left) {
-                result.push(current.right);
+            if(currentNode.right) {
+                temp.push(currentNode.right);
             }
-            result.shift();
+            temp.shift()
         }
+
+        return result;
+        
     }
 
 }
@@ -148,8 +154,8 @@ console.log();
 prettyPrint(tree.root);
 
 console.log('\n4. Level Order...\n');
-console.log(levelOrder());
 
+console.log(tree.levelOrder())
 
 
 
