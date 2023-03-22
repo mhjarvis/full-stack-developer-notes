@@ -185,6 +185,26 @@ class Tree {
             return right + 1;
         }
     }
+
+    depth(value) {
+        return this._depth(value, this.root);
+    }
+    _depth(value, root) {
+        let count = 0;
+        if(!root) {
+            return;
+        }
+        while(root.data != value) {
+            if(root.data > value) {
+                root = root.left;
+                count++;
+            } else if(root.data < value) {
+                root = root.right;
+                count++;
+            }
+        }
+        return count;
+    }
 }
 
 let tree = new Tree();
@@ -282,8 +302,10 @@ console.log('\n8. Height of the tree...\n');
 
 console.log(tree.height());
 
+/* ********************** Depth Function ********************** */
 
-
+console.log('\n9. Depth of the value 78...\n');
+console.log(tree.depth(78));
 
 
 
