@@ -126,13 +126,10 @@ class Tree {
         if(!currentNode) {
             return;
         };
-
-
         if(currentNode.left) {
             this._inOrder(fn, currentNode.left);
         }
-                fn(currentNode.data);
-
+        fn(currentNode.data);
         if(currentNode.right) {
             this._inOrder(fn, currentNode.right);
         }
@@ -147,12 +144,29 @@ class Tree {
             return;
         }
         if(currentNode.left) {
-            this._inOrder(fn, currentNode.left);
+            this._postOrder(fn, currentNode.left);
         }
         if(currentNode.right) {
-            this._inOrder(fn, currentNode.right);
+            this._postOrder(fn, currentNode.right);
         }
-                fn(currentNode.data);
+        fn(currentNode.data);
+    }
+
+    preOrder(fn) {
+        return this._preOrder(fn, this.root);
+    }
+
+    _preOrder(fn, currentNode) {
+        if(!currentNode) {
+            return;
+        }
+        fn(currentNode.data);
+        if(currentNode.left) {
+            this._preOrder(fn, currentNode.left);
+        }
+        if(currentNode.right) {
+            this._preOrder(fn, currentNode.right);
+        }
     }
 }
 
@@ -235,7 +249,15 @@ console.log('\n...printing values from postOrder()...\n');
 
 tree.postOrder(print);
 
+/* ********************** Pre Order Traversal ********************** */
 
+console.log('\n7. Pre Order...\n');
+
+prettyPrint(tree.root);
+
+console.log('\n...printing values from preOrder()...\n');
+
+tree.preOrder(print);
 
 
 
