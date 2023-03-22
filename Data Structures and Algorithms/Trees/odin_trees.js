@@ -73,20 +73,19 @@ class Tree {
     }
 
     _find(value, currentNode) {
-        console.log(currentNode.data, value)
-        if(currentNode.data == value) {
-            return true;
+        if(currentNode === null) {
+            return 'Value does not exist';
+        } else {
+            if(currentNode.data === value) {
+                return currentNode;
+            }
+            if(value > currentNode.data) {
+                return this._find(value, currentNode.right);
+            } else if(value < currentNode.data) {
+                return this._find(value, currentNode.left);
+            }
         }
-
-
-
-
-
-
     }
-
-
-
 
 
 }
@@ -120,11 +119,11 @@ tree.delete(1);
 
 prettyPrint(tree.root);
 
-console.log('\n3. Searching for values 34, 33, and 79...\n');
+console.log('\n3. Searching for values 34, 33, and 56...\n');
 
-console.log('Is 34 in the tree: ' +  tree.find(34));
-console.log('Is 33 in the tree: ', tree.find(33));
-console.log('Is 79 in the tree: ', tree.find(79));
+console.log('Is 34 in the tree (true)\n', tree.find(34));
+console.log('\nIs 33 in the tree (true): \n', tree.find(33));
+console.log('\nIs 56 in the tree (false): \n', tree.find(56));
 console.log();
 
 prettyPrint(tree.root);
