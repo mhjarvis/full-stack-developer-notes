@@ -87,6 +87,25 @@ class Tree {
         }
     }
 
+    levelOrder(fn, currentNode = this.root) {
+        let result = [];
+        if(currentNode = null) {
+            return;
+        }
+
+        result.push(currentNode);
+        while(result != []) {
+            current = result[0];
+            console.log(fn(current.data));
+            if(current.left) {
+                result.push(current.left);
+            }
+            if(current.left) {
+                result.push(current.right);
+            }
+            result.shift();
+        }
+    }
 
 }
 
@@ -127,6 +146,9 @@ console.log('\nIs 56 in the tree (false): \n', tree.find(56));
 console.log();
 
 prettyPrint(tree.root);
+
+console.log('\n4. Level Order...\n');
+console.log(levelOrder());
 
 
 
