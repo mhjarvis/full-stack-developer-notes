@@ -205,6 +205,80 @@ class Tree {
         }
         return count;
     }
+
+    isBalanced() {
+        return this._isBalanced(this.root);
+    }
+    _isBalanced(root) {
+        let left, right;
+        
+        if(!root) {
+            return -1;
+        };
+        
+        while(root){
+            left = this.height(root.left)
+            right = this.height(root.right);
+            
+            if(left > right) {
+                left + 1;
+            } else {
+                right + 1;
+            }
+            break;
+        }
+
+        if(Math.abs(left - right) > 1) { 
+            return false;
+        } else {
+            return true;
+        }
+    }
+
+    balance() {
+        this._balance(this.root);
+    }
+    _balance(current) {
+        let array = [];
+        let count = 0;
+        let result = [];
+
+        if(!current) return;
+
+        array.push(current)
+        
+        while(array[count]){
+            
+            if(current.left && current.right){
+                array.push(current.left)
+                array.push(current.right)
+            }else{
+                if(current.left && !current.right) array.push(current.left)
+                if(!current.left && current.right) array.push(current.right)
+            }
+            count++;
+            current = array[count];
+            
+
+        }
+       
+        for(let i=0;i<array.length;i++){
+            result.push(array[i].data)
+        }
+        
+        let removeDupe = [...new Set(result)];
+
+        let dupeSortArray = removeDupe.sort((a,b)=>{
+            return a-b;
+        })
+
+        console.log(result)
+
+        
+        
+       this.root = buildTree(dupeSortArray,0,result.length-1)
+        
+    }
 }
 
 let tree = new Tree();
@@ -227,6 +301,8 @@ tree.insert(79);
 tree.insert(98);
 tree.insert(93);
 tree.insert(23);
+tree.insert(80);
+tree.insert(81);
 
 prettyPrint(tree.root);
 
@@ -307,11 +383,15 @@ console.log(tree.height());
 console.log('\n9. Depth of the value 78...\n');
 console.log(tree.depth(78));
 
+/* ********************** isBalanced Function ********************** */
 
+console.log('\n10. isBalanced Function...\n');
+console.log('Tree is balanced: ', tree.isBalanced());
 
+/* ********************** balance Function ********************** */
 
-
-
+console.log('\n11. isBalanced Function...\n');
+tree.balance();
 
 
 
@@ -327,3 +407,19 @@ function prettyPrint(node, prefix = '', isLeft = true) {
       prettyPrint(node.left, `${prefix}${isLeft ? '    ' : '│   '}`, true);
     }
   }
+
+  function buildTree(array,startIndex,endIndex){
+
+    if(startIndex>endIndex){
+        return null;
+    }
+    
+    let midIndex = Math.floor((startIndex+endIndex)/2);
+
+    let node = new Node(array[midIndex])
+    
+    node.left = buildTree(array,startIndex,midIndex-1)
+    node.right = buildTree(array,midIndex+1,endIndex)
+    
+    return node;
+}
