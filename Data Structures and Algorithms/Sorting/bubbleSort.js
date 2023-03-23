@@ -28,9 +28,7 @@ let arr = [34, 22, 39, 4, 18, 384, 2 ,3, 298, 6, 43, 19, 29, 38]
 let arr2 = [34, 22, 39, 4, 18, 384, 2 ,3, 298, 6, 43, 19, 29, 38]
 
 
-function bubbleSort(arr) {
-
-    let start = performance.now();
+export function bubbleSort(arr) {
 
     for(let i = 0; i < arr.length; i++) {
         for(let j = 0; j < arr.length; j++) {
@@ -40,16 +38,11 @@ function bubbleSort(arr) {
                 arr[j] = temp;
             }
         }
-    }
-
-    let end = performance.now();
-    let time = end - start;
-    console.log('Execution time: ' + time);
-    
+    }    
     return arr;
 }
 
-function bubbleSortOptimized(arr) {
+export function bubbleSortOptimized(arr) {
     let isSwapped = false;
 
     let start = performance.now();
