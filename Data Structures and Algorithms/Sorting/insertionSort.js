@@ -15,6 +15,7 @@ Logic of Insertion Sort:
       value, we can end our pass-through.
 6. Move the temp value in the new gap.
 
+Four types of steps occur in Insertion Sort: removals, comparisons, shifts, and insertions. 
 */
 
 function insertionSort(arr) {
