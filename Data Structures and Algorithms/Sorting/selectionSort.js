@@ -1,4 +1,15 @@
-/* Selection Sort
+/* Efficiency of Selection Sort
+
+Selection Sort, like buble sort, has both comparisons and swaps.
+
+N elements      Max # of steps in Bubble Sort       Max # of Steps in Selection Sort
+    5                       20                          14 (10 compare + 4 swaps)
+    10                      90                          54 (45 compare + 9 swaps)
+    20                      380                         199 (180 + 19)
+    40                      1560                        819 (780 + 39)
+    80                      6320                        3239 (3160 + 79)
+
+Overall, Selection Sort remains as N^2 since we ignore constants when writing Big O notation. Despite that, we can still see that Selection Sort is about twice as fast as Bubble Sort.
 
 */
 
