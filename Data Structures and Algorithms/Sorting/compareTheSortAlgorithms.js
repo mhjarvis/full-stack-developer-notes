@@ -116,7 +116,7 @@ console.log('Execution time for selectionSort():' + time3);
 /* function test(n) {
     let arr = [];
     count = 0;
-    
+    to
     while(count < n) {
         let x = Math.floor(Math.random() * 10000);
         arr.push(x);
