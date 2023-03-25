@@ -13,7 +13,7 @@ Overall, Selection Sort remains as N^2 since we ignore constants when writing Bi
 
 */
 
-export function selectionSort(array) {
+function selectionSort(array) {
 
     for(let i = 0; i < array.length - 1; i++) {
         let newLowest = i;
@@ -23,9 +23,10 @@ export function selectionSort(array) {
             }
         }
         if(newLowest != i) {
-            let temp = array[i];
+            [array[i], array[newLowest]] = [array[newLowest], array[i]]; 
+/*             let temp = array[i];
             array[i] = array[newLowest];
-            array[newLowest] = temp;
+            array[newLowest] = temp; */
         }
     }
     return array;
