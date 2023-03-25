@@ -43,7 +43,8 @@ function selectionSort(array) {
             }
         }
         if(newLowest != i) {
-            let temp = array[i];
+/*             [array[i], array[newLowest]] = [array[newLowest, array[i]]]
+ */            let temp = array[i];
             array[i] = array[newLowest];
             array[newLowest] = temp;
         }
