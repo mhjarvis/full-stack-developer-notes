@@ -11,3 +11,12 @@ class Vertex {
     }
 }
 
+// Create Graph class
+
+class Graph {
+    constructor(isDirected = false) {
+        this.isDirected = isDirected;
+        this.vertices = [];
+        this.adjList = new Dictionary();
+    }
+}
