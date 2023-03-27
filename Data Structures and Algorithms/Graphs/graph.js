@@ -91,3 +91,12 @@ A common implementation of a graph is the Adjacency Matrix. Like a chess board, 
 Graphs that are not strongly connected (Sparse Graphs) will have many zero entries in the matrix.
 
 */
+
+/* The Adjacency List
+
+This implementation contains a list of adjacent vertices for every vertex of the graph. To represent the list of adjacent vertices, one could use a list (array), linked list, or hash map / dictionary.
+
+This is the more common approach for most problems.
+
+*/
+
