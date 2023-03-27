@@ -100,3 +100,11 @@ This is the more common approach for most problems.
 
 */
 
+/* The Incidence Matrix
+
+In an Incidence Matrix, each row of the matrix represents a vertex, and each column rpresents an edge. Connectivity between two objects is represented using a two-dimensional array (e.g. array[v][e] === 1) if the vertex 'v' is an incident upon edge 'e' or as (e.g. array[v][e] === 0) otherwise.
+
+This is usually used to save space and memory when there are more edges than vertices.
+
+*/
+
