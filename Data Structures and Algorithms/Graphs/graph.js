@@ -83,3 +83,11 @@ bob.addAdjacentVertices(cynthia)
 cynthia.addAdjacentVertices(bob)
 
 console.log(alice)
+
+/* Adjacency Matrix
+
+A common implementation of a graph is the Adjacency Matrix. Like a chess board, each node is repreented by a integer. Connections between vertices are made using a two-dimensional array (e.g. array[i][j === 1]) - if there is an edge from the node with index i to the node with index j (0 is used otherwise). 
+
+Graphs that are not strongly connected (Sparse Graphs) will have many zero entries in the matrix.
+
+*/
