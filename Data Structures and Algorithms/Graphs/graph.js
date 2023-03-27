@@ -56,4 +56,21 @@ class Vertex {
         this.value = value;
         this.adjacent_vertices = adjacent_vertices;
     }
+
+    addAdjacentVertices(val) {
+         this.adjacent_vertices = val;
+    }
 }
+
+// Build a direct graph using classd
+console.log('\nPrint out a value in a direct graph implementation: \n')
+let alice = new Vertex('alice')
+let bob = new Vertex('bob')
+let cynthia = new Vertex('cynthia')
+
+alice.addAdjacentVertices(bob)
+alice.addAdjacentVertices(cynthia)
+bob.addAdjacentVertices(cynthia)
+cynthia.addAdjacentVertices(bob)
+
+console.log(alice)
