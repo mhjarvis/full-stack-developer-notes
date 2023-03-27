@@ -1,6 +1,6 @@
 /* General Information on Graphs
 
-Graph data structures are good at showing relationships between data. 
+Graph data structures are good at showing relationships between data. They help solve many different problems, such as searching a graph for a specific vertex or searching for a specific edge, finding a path in the graph (from one vertex to another), finding the shortest path between two vertices, and cycle detection.
 
                         Alice --- Fred --- Elise
                         /  \       /
@@ -34,9 +34,11 @@ let friends = {
 
 console.log(friends.Alice)
 
-/* Direct Graphs 
+/* Direct Graphs vs Undirected Graphs
 
-Relationships are not always mutual (Bob and Diana could follow each other, but Bob might not follow Diana back). This is known as a "direct graph". 
+Directed Graphs have a direction while Undirected Graphs do not. A graph is "Strongly Connected" if there is a path in both directions between every pair of vertices (Cynthia and Bob bellow). 
+
+Graphs can also be "weighted" and "unweighted". This means that the edges themselvees have values (weights). 
 
                 Alice
                 /   \
