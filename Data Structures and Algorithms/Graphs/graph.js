@@ -29,7 +29,31 @@ console.log(friends.Alice)
 
 /* Direct Graphs 
 
+Relationships are not always mutual (Bob and Diana could follow each other, but Bob might not follow Diana back). This is known as a "direct graph". 
 
-
+                Alice
+                /   \
+               /     \
+              /       \
+           Cynthia === Bob
 
 */
+
+let followees = {
+    'Alice': ['Bob', 'Cynthia'], 
+    'Bob': ['Cynthia'],
+    'Cynthia': ['Bob'],
+}
+
+console.log(followees.Bob)
+
+/* Object-Oriented Graph Implementation
+
+*/
+
+class Vertex {
+    constructor(value, adjacent_vertices = []) {
+        this.value = value;
+        this.adjacent_vertices = adjacent_vertices;
+    }
+}
