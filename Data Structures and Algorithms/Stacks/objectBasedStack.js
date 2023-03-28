@@ -16,6 +16,11 @@ class Stack {
         this.items[this.count] = element;
         this.count++;
     }
+
+    // return size of the object
+    size() {
+        return this.count;
+    }
 }
 
 // instantiate a stack and see if it is empty...
@@ -28,3 +33,4 @@ stack.push(22);
 stack.push(23);
 
 console.log('\nAdded the numbers 5, 10, 22, 23 and printing the current stack: ', stack);
+console.log('\nCurrent size of the array: ', stack.size());
