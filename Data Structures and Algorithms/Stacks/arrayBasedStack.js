@@ -23,6 +23,11 @@ class Stack {
         return this.items[this.items.length - 1];
     }
 
+    // return size of array
+    size() {
+        return this.items.length;
+    }
+
     // check to see if the stack is empty
     isEmpty() {
         return this.items.length === 0;
@@ -47,4 +52,14 @@ stack.push(23);
 // peek at the last element...
 console.log('\nAdding the numbers 5, 10, 22, 23 to stack...peeking at the last element: ', stack.peek());
 
-// 
+// test stack size and isEmpty...
+console.log('\nStack size is: ', stack.size());
+console.log('\nThe stack is empty: ', stack.isEmpty());
+
+// output current stack...
+console.log('\nOutputing the current stack: ', stack)
+
+// remove the last two elements using pop()...
+stack.pop();
+stack.pop();
+console.log('\nPopping the last two elements of the array. The new array is: ', stack);
