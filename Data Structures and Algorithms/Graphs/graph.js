@@ -19,4 +19,11 @@ class Graph {
         this.vertices = [];
         this.adjList = new Dictionary();
     }
+
+    addVertex(v) {
+        if(!this.vertices.includes(v)) {
+            this.vertices.push(v);
+            this.adjList.set(v, []);
+        }
+    }
 }
