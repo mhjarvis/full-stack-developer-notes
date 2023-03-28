@@ -52,6 +52,25 @@ let Stack = (() => {
             return items.get(sKey).length;
         }
     }
-    
+
     return Stack;
 })();
+
+// create new Stack and add some data
+let stack = new Stack();
+stack.push(10);
+stack.push(20);
+
+console.log(stack.items);           // undefined -> cannot be accessed directly
+
+console.log(stack.size());          // 2
+
+console.log(stack.peek());          // 20
+
+console.log(stack.pop());           // 20
+
+console.log(stack.size());          // 1
+
+stack.clear();
+
+console.log(stack.size());          // 0
