@@ -37,6 +37,32 @@ class Stack {
         delete this.items[this.count];              // remove the element from this.items
         return result;
     }
+
+    // peek function
+    peek() {
+        if(this.isEmpty()) {
+            return 'Array is empty';
+        }
+        return this.items[this.count - 1];
+    }
+
+    // clear stack function
+    clear() {
+        this.items = {};
+        this.count = 0;
+    }
+
+    // create toString() to print the content of the stack similar to an array
+    toString() {
+        if(this.isEmpty()) {
+            return 'Array is empty';
+        }
+        let str = `${this.items[0]}`;
+        for(let i = 1; i < this.count; i++) {
+            str = `${str}, ${this.items[i]}`;
+        }
+        return str;
+    }
 }
 
 // instantiate a stack and see if it is empty...
@@ -55,3 +81,20 @@ console.log('\nStack is empty: ', stack.isEmpty());
 // pop element
 console.log('\nPopping the last element: ', stack.pop());
 console.log('\nPrinting out the current stack: ', stack);
+
+// peek
+console.log('\nPeeking at last element: ', stack.peek());
+console.log('\nPrinting out the current stack: ', stack);
+
+// clear stack
+console.log('\nClearing the stack: ', stack.clear());
+console.log('\nPrinting out the current stack: ', stack);
+
+stack.push(5);
+stack.push(10);
+stack.push(22);
+stack.push(23);
+
+// print stack
+console.log('\nAdding values back into the stack...');
+console.log('\nPrinting out the current stack: ', stack.toString());
