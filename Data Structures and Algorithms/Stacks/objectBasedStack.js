@@ -21,6 +21,11 @@ class Stack {
     size() {
         return this.count;
     }
+
+    // return isEmpty value
+    isEmpty() {
+        return this.count === 0;
+    }
 }
 
 // instantiate a stack and see if it is empty...
@@ -34,3 +39,4 @@ stack.push(23);
 
 console.log('\nAdded the numbers 5, 10, 22, 23 and printing the current stack: ', stack);
 console.log('\nCurrent size of the array: ', stack.size());
+console.log('\nStack is empty: ', stack.isEmpty());
