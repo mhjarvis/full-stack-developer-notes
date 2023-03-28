@@ -1,6 +1,6 @@
 /* Stacks
 
-Stacks are last in first out (LIFO) data structures. 
+Stacks are last in first out (LIFO) data structures. Addition and removal of items occur on the sam end. 
 
 Top - indicates the top of the stack.
 Bottom - indicates the bottom of the stack.
