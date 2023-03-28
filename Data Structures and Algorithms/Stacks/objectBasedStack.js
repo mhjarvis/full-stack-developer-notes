@@ -2,6 +2,8 @@
 
 In JavaScript, an object is a set of key and value pairs. The 'count' variable will be the key of the objects. 
 
+
+
 */
 
 // instantiate class
