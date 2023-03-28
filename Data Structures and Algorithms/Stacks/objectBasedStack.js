@@ -26,6 +26,17 @@ class Stack {
     isEmpty() {
         return this.count === 0;
     }
+
+    // remove last element from the array
+    pop() {
+        if(this.isEmpty()) {                        // check if the stack is empty
+            return 'Array is empty';
+        }
+        this.count--;                               // if not empty, decrement the count variable
+        const result = this.items[this.count];      // store the value from the top of the stack
+        delete this.items[this.count];              // remove the element from this.items
+        return result;
+    }
 }
 
 // instantiate a stack and see if it is empty...
@@ -40,3 +51,7 @@ stack.push(23);
 console.log('\nAdded the numbers 5, 10, 22, 23 and printing the current stack: ', stack);
 console.log('\nCurrent size of the array: ', stack.size());
 console.log('\nStack is empty: ', stack.isEmpty());
+
+// pop element
+console.log('\nPopping the last element: ', stack.pop());
+console.log('\nPrinting out the current stack: ', stack);
