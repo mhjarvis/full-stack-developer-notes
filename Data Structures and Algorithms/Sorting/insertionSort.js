@@ -1,5 +1,15 @@
 /* Efficiency of Insertion Sort
 
+Efficiency:
+
+Four types of steps occur in Insertion Sort: removals, comparisons, shifts, and insertions. 
+
+In a worst case situation, Selection Sort will be faster than Insertion Sort.  However, when looking at just the average case, we would average )(N^2 / 2) which would translate to O(N^2). 
+
+Insert
+
+
+
 Logic of Insertion Sort:
 
 1. Loop through the array starting at index 1.
@@ -15,7 +25,6 @@ Logic of Insertion Sort:
       value, we can end our pass-through.
 6. Move the temp value in the new gap.
 
-Four types of steps occur in Insertion Sort: removals, comparisons, shifts, and insertions. 
 */
 
 function insertionSort(arr) {
