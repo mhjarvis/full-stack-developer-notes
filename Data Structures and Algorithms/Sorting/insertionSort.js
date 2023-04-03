@@ -4,9 +4,9 @@ Efficiency:
 
 Four types of steps occur in Insertion Sort: removals, comparisons, shifts, and insertions. 
 
-In a worst case situation, Selection Sort will be faster than Insertion Sort.  However, when looking at just the average case, we would average )(N^2 / 2) which would translate to O(N^2). 
+In a worst case situation, Selection Sort will be faster than Insertion Sort.  However, when looking at just the average case, we would average O(N^2 / 2) which would translate to O(N^2). 
 
-Insert
+Insertion sort is most efficient when data is 'mostly' sorted. 
 
 
 
