@@ -84,7 +84,7 @@ console.log(hashTable)
 // This loop will now create a type of index for the array, using a hash table.
 // We can now also use a single loop and run through the array to see if each value is in it
 
-function testSubset(table, subset) {
+function testSubset(subset) {
     for (const value of subset) {
         if(!hashTable[value]) {
             return false;
@@ -93,6 +93,39 @@ function testSubset(table, subset) {
     return true;
 }
 
-console.log('\n...[474, 24, 5] is in the big array: ', testSubset(hashTable, subset))
+console.log('\n...[474, 24, 5] is in the big array: ', testSubset(subset))
 
 // This effectivly takes our efficiency from O(n^2) using loops to O(n)
+
+
+function intersection(table) {
+    let arr = []
+    let testArr = [2, 3444, 3467, 2938, 4, 5]
+
+    for (const value of testArr) {
+        if(table[value]) {
+            arr.push(value);
+        }
+    }
+    return arr;
+}
+
+// Test function that returns the intersection of an array in O(n) time using hash table
+
+console.log('\n...The intersection of [2, 3444, 3467, 2938, 4, 5] is: ', intersection(hashTable))
+
+// Return the first duplicate value in an array
+
+function returnDublicate(arr) {
+    let hashT = {}
+
+    for (const value of arr) {
+        if(hashT[value] === true) {
+            return value;
+        }
+        hashT[value] = true;
+    }
+    return 'No duplicate found';
+}
+
+console.log('\n...What is the first duplicate in ["a", "b", "c", "d", "c", "e", "f"]: ', returnDublicate(["a", "b", "c", "d", "c", "e", "f"]))
