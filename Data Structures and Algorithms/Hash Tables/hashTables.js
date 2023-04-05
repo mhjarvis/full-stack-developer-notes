@@ -44,7 +44,7 @@ Since there is already a value in cell 8, we would encounter a collision. One so
 
 MAKING AN EFFICIENT HASH TABLE:
 
-
+A primary consideration when creating a hash function is the balance between avoiding collisions and not taking up memory unnecissarily. A rule of thumb then is that for every 7 data elements stored in the table, it should have 10 cells. This is called the 'load factor'. Ideally, the load factor is 0.7. 
 
 
 
