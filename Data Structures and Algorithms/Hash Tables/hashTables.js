@@ -74,3 +74,13 @@ Instead of doing a linear search on this unordered array, we can use a hash tabl
 
 // Test whether an array is a subset using hash tables in liue of dual for loops
 
+let bigArr = [1, 3, 8, 34, 2, 752, 23, 65, 3467, 474, 34345, 24, 345354, 54647, 987, 7897, 5, 4, 546, 99]
+let subset = [474, 24, 5]
+
+let hashTable = {}
+
+for (let i = 0; i < bigArr.length; i++) {
+    hashTable[bigArr[i]] = true;
+}
+
+console.log(hashTable)
