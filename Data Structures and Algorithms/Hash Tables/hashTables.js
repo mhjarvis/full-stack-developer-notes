@@ -46,12 +46,31 @@ MAKING AN EFFICIENT HASH TABLE:
 
 A primary consideration when creating a hash function is the balance between avoiding collisions and not taking up memory unnecissarily. A rule of thumb then is that for every 7 data elements stored in the table, it should have 10 cells. This is called the 'load factor'. Ideally, the load factor is 0.7. 
 
+HASH TABLE USE CASES: 
 
+Obvious use cases include naturally paired data (e.g. canidate => votes received, an inventory tracking system - shirt A => 101 in stock). They can also be used to simplify conditional statements (especially long conditional statements). 
 
+HASH TABLES FOR SPEED
 
+Basic arrays can be turned into hash tables to increase speed. For example, given the following: 
+
+    arr = [61, 34, 20, 111, 209]
+
+Instead of doing a linear search on this unordered array, we can use a hash table for increased speeds. 
+
+    {
+        61: true,
+        34: true,
+        20: true,
+        111: true,
+        209: true,
+    }
 
 
 
 
 
 */
+
+// Test whether an array is a subset using hash tables in liue of dual for loops
+
