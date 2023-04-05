@@ -66,10 +66,6 @@ Instead of doing a linear search on this unordered array, we can use a hash tabl
         209: true,
     }
 
-
-
-
-
 */
 
 // Test whether an array is a subset using hash tables in liue of dual for loops
@@ -77,10 +73,24 @@ Instead of doing a linear search on this unordered array, we can use a hash tabl
 let bigArr = [1, 3, 8, 34, 2, 752, 23, 65, 3467, 474, 34345, 24, 345354, 54647, 987, 7897, 5, 4, 546, 99]
 let subset = [474, 24, 5]
 
-let hashTable = {}
+let hashTable = {}      // create hash table
 
-for (let i = 0; i < bigArr.length; i++) {
-    hashTable[bigArr[i]] = true;
+for (const value of bigArr) {       // add 'true' to each index of the array
+    hashTable[value] = true;
 }
 
 console.log(hashTable)
+
+// This loop will now create a type of index for the array, using a hash table.
+// We can now also use a single loop and run through the array to see if each value is in it
+
+function testSubset(table, subset) {
+    for (const value of subset) {
+        if(!hashTable[value]) {
+            return false;
+        }
+    }
+    return true;
+}
+
+console.log('\n...[474, 24, 5] is in the big array: ', testSubset(hashTable, subset))
