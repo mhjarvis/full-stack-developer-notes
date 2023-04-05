@@ -1,5 +1,7 @@
 /* Hash Tables
 
+GENERAL:
+
 Depending on the language, these are refered to by many different names (e.g. maps, hash maps, dictionaries, associative arrays, etc.). Hash Table is a list of paired values. The first item is the 'key' and the second item is the 'value'. These have a significant association with each other. 'Hashing' is similar to the decypher code used when playing as kids to decypher notes. 
 
 ** Hash function need to meet only one criterion to be valid: a hash function must convert the same string to the same number every single time it's applied. 
@@ -24,15 +26,13 @@ This puts our Key 'ACE' into cell 15. This gives us the following hash table:
         'ACE': 'star',
     }
 
+** There can only be one instance of a key in a hash table, but multiple instances of the same value.
 
+EFFICIANCY:
 
+Hash Tables can be used to look up data in O(1) time. In our example above, the computer performs 2 steps to lookup the key 'BAD' - it hashes the key, and then looks in cell 8 for the value. Because it will always take a constant amount of time, we will get O(1) efficiency. However, this only works if we know the key. If we only knew the 'value', we would still have to revert to searcing the entire hash table. 
 
-
-    
-
-Efficiency:
-
-Hash Tables can be used to look up data in O(1) time.
+COLLISIONS:
 
 
 
