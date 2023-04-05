@@ -129,3 +129,25 @@ function returnDublicate(arr) {
 }
 
 console.log('\n...What is the first duplicate in ["a", "b", "c", "d", "c", "e", "f"]: ', returnDublicate(["a", "b", "c", "d", "c", "e", "f"]))
+
+// Use a hash table to find the missing alphabete letter in a string
+
+function findMissingLetter(string) {
+    let hashTable = {}
+
+    for (let i = 0; i < string.length; i++) {        // create hash table
+        hashTable[string[i]] = true;
+    }
+
+    let alphabet = 'abcdefghijklmnopqrstuvwxyz'
+    for (let i = 0; i < alphabet.length; i++) {
+        if(!hashTable[alphabet[i]]) {
+            return alphabet[i];
+        }
+    }
+}
+
+// Here we first create a hash table out of the string that is to be tested,
+// after which we run the alphabet through the hash table and return any value that is false
+
+console.log('\n...The string ""the quick brown box jumps over a lazy dog" is missing the letter: ', findMissingLetter("the quick brown box jumps over a lazy dog"))
