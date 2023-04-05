@@ -32,13 +32,15 @@ EFFICIANCY:
 
 Hash Tables can be used to look up data in O(1) time. In our example above, the computer performs 2 steps to lookup the key 'BAD' - it hashes the key, and then looks in cell 8 for the value. Because it will always take a constant amount of time, we will get O(1) efficiency. However, this only works if we know the key. If we only knew the 'value', we would still have to revert to searcing the entire hash table. 
 
+** It is important to setup Hash Tables in such a way that collisions are kept to a minimum, as worst case (i.e. if all keys are collisions), we essentially have an array and an efficiency of O(n) - see below.
+
 COLLISIONS:
 
 What would happen if we were to hash the key 'DAB' = 'pat'?
 
     DAB = 'pat' = 4 * 1 * 2 = 8
 
-Since there is already a value in cell 8, we would encounter a collision. One solution to this is to apply separate chaining - placing a reference to an array in that cell containing all values to that key. If we then lookup the key 'DAB', the computer first hashes they key (8), looks up cell 8 and notes it contains an array, then searches the array linearly looking at each index until it finds the day matching 'DAB', then returns the value at that index.
+Since there is already a value in cell 8, we would encounter a collision. One solution to this is to apply separate chaining - placing a reference to an array in that cell containing all values to that key. If we then lookup the key 'DAB', the computer first hashes they key (8), looks up cell 8 and notes it contains an array, then searches the array linearly looking at each index until it finds the day matching 'DAB', then returns the value at that index.t
 
 
 
