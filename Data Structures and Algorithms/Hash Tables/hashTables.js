@@ -151,3 +151,25 @@ function findMissingLetter(string) {
 // after which we run the alphabet through the hash table and return any value that is false
 
 console.log('\n...The string ""the quick brown box jumps over a lazy dog" is missing the letter: ', findMissingLetter("the quick brown box jumps over a lazy dog"))
+
+// Use hash table to find first non-dublicate value in a string
+
+function firstNonDuplicate(string) {
+    let hashTable = {}
+
+    for (let i = 0; i < string.length; i++) {
+        if(hashTable[string[i]]) {
+            hashTable[string[i]]++;
+        } else {
+            hashTable[string[i]] = 1;
+        }
+    }
+
+    for (let j = 0; j < string.length; j++) {
+        if(hashTable[string[j]] === 1) {
+            return string[j];
+        }
+    }
+}
+
+console.log('')
