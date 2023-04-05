@@ -94,3 +94,5 @@ function testSubset(table, subset) {
 }
 
 console.log('\n...[474, 24, 5] is in the big array: ', testSubset(hashTable, subset))
+
+// This effectivly takes our efficiency from O(n^2) using loops to O(n)
