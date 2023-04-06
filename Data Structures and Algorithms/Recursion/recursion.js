@@ -80,3 +80,5 @@ function sums(arr, index = 0) {
 
 
 console.log('\nThe array [1,2,3,4,5,6,7,8,9] sums up to be: ', sums([1,2,3,4,5,6,7,8,9]))
+
+// String Reversal function
