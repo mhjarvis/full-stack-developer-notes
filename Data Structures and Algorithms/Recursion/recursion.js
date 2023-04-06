@@ -15,6 +15,8 @@ To prevent our function from continuing indefinetly, we need a way to end the fu
 
 Thus, the ```base case``` is the case in the function that the function will not recurse. EVERY RECURSIVE FUNCTION NEEDS AT LEAST ONE BASE CASE TO PREVENT IT FROM CALLING ITSELF INDEFINITELY.
 
+RECURSION AND THE COMPUTER
 
+A computer processes recursive code through the use of the call stack. Just like the stack, each new function call is added to the stack until it reaches the base case. Thus, a lot of memory may be used when the stack begins to build up. In the event of a infinite recursion, we get a ```Stack Overflow```. At this point, there is no more room in short-term memory.
 
 */
