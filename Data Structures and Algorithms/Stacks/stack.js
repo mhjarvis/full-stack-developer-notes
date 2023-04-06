@@ -1,11 +1,18 @@
 /* Stacks
 
+Stacks store data in the same way arrays do, but they have 3 restraints:
+    1. Data can be inserted only at the end of the stack.
+    2. Data can be deleted only from the end of a stack.
+    3. Only the last element of a stack can be read. 
+
 Stacks are last in first out (LIFO) data structures. Addition and removal of items occur on the sam end. 
 
 Top - indicates the top of the stack.
 Bottom - indicates the bottom of the stack.
 
-Creating your own stack module will help in terms of efficiency and in time complexity isusses. It also adds semantic maning to the application. 
+Creating your own stack module will help in terms of efficiency and in time complexity isusses. It also adds semantic meaning to the application. 
+
+
 
 */
 
