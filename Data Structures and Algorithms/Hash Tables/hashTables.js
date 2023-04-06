@@ -172,4 +172,4 @@ function firstNonDuplicate(string) {
     }
 }
 
-console.log('')
+console.log('\n...The first non-dublicate in the string "minimum" is: ', firstNonDuplicate('minimum'))
