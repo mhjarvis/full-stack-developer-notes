@@ -52,13 +52,31 @@ let array = [1,2,3,4,5,6]
 doubleArray(array, 0)
 
 // print newly modified array
-console.log(array)
+console.log('\nDoubling the array [1,2,3,4,5,6] equals: ', array)
 
 /* 
 
 RECURSIVE CATEGORY: CALCULATIONS
 
-This category of problems focuses on performing a calculation based on a subproblem. A SUBPROBLEM is a version of the same problem applied to a smaller input. 
+This category of problems focuses on performing a calculation based on a subproblem. A SUBPROBLEM is a version of the same problem applied to a smaller input. In part, we don't even need to know how the calculation actually works.
 
+When tackeling a top-down recursive type problem, there are three things to think about that can help make everything easier:
+    1. Imaging the function your writing has already been implemented by someone else.
+    2. Identify the subproblem of the problem.
+    3. See what happens when you call the function on the subproblem and go from there.
 
 */
+
+// Function that sums all numbers of an array
+
+let total = 0;
+
+function sums(arr, index = 0) {
+    if (index >= arr.length - 1) {
+        return total;
+    }
+    return arr[index] + sums(arr, index + 1)
+}
+
+
+console.log('\nThe array [1,2,3,4,5,6,7,8,9] sums up to be: ', sums([1,2,3,4,5,6,7,8,9]))
