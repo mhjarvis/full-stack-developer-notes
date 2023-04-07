@@ -106,9 +106,16 @@ console.log('\nThe reverse string of "abcdef" is (using alt fun): ', reverseStri
 
 // Function Count X that returns the number of 'x's in a string
 
-function countX(string) {
+function countX(string, index = 0) {
+    if (index === string.length) {
+        return 0;
+    }
 
-
+    if (string[index] === 'x') {
+        return 1 + countX(string, index + 1)
+    } else {
+        return countX(string, index + 1)
+    }
 }
 
-console.log('\nThe number of x\'s in the string "xbxcxd" : ', countX('xbxcxd'))
+console.log('\nThe number of x\'s in the string "xbxxdfreewcxd" : ', countX('xbxxdfreewcxd'))
