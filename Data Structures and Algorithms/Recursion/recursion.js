@@ -96,7 +96,19 @@ console.log('\nThe reverse string of "abcdef" is: ', reverse('abcdef'))
 // String Reversal function (Alternative)
 
 function reverseString(string) {
-
+    if (string === '') {
+        return ''
+    }
+    return reverseString(string.substr(1)) + string.charAt(0)
 }
 
 console.log('\nThe reverse string of "abcdef" is (using alt fun): ', reverseString('abcdef'))
+
+// Function Count X that returns the number of 'x's in a string
+
+function countX(string) {
+
+
+}
+
+console.log('\nThe number of x\'s in the string "xbxcxd" : ', countX('xbxcxd'))
