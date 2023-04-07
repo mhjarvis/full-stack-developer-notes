@@ -148,3 +148,17 @@ Let’s say we have a staircase of N steps, and a person has the ability to clim
         return 1
     }
 */
+
+// Put it all together, we get:
+
+function numberOfPaths(n) {
+    if (n < 0) {
+        return 0
+    }
+    if (n == 1 || n == 0) {
+        return 1
+    }
+    return numberOfPaths(n - 1) + numberOfPaths(n - 2) + numberOfPaths(n - 3)
+}
+
+console.log('\nThe number of paths for 11 staircases is: ', numberOfPaths(11))
