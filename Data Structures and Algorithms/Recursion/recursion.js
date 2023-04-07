@@ -119,3 +119,32 @@ function countX(string, index = 0) {
 }
 
 console.log('\nThe number of x\'s in the string "xbxxdfreewcxd" : ', countX('xbxxdfreewcxd'))
+
+/* The Staircase Problem
+
+Let’s say we have a staircase of N steps, and a person has the ability to climb one, two, or three steps at a time. How many different possible “paths” can someone take to reach the top? Write a function that will calculate this for N steps.
+
+*/
+
+// Using the method above, we can solve the problem by using the top-down method
+// First, we find the sub-problem, in this case, a 10-step staircase (in a 11-step staircase)
+// The number of steps to the top is at least the sum of all the paths to stairs 10, 9, and 8
+// since one can jump from 8 to 11, but not from 7 to 11, etc
+
+/*
+    function numberOfPaths(n) {
+        numberOfPaths(n - 1) + numberOfPaths(n - 2) + numberOfPaths(n - 3)
+    }
+*/
+
+// At this point, we only need to add the base case
+// First, we know that if there is only one step, we need it to return 1.
+
+/*
+    if (n < 0) {
+        return 0
+    }
+    if (n == 1 || n == 0) {
+        return 1
+    }
+*/
