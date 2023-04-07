@@ -162,3 +162,13 @@ function numberOfPaths(n) {
 }
 
 console.log('\nThe number of paths for 11 staircases is: ', numberOfPaths(11))
+
+/* Angram Generation 
+
+*/
+
+function angram(string) {
+
+}
+
+console.log('\nAngram of abcd includes: ', angram('abcd'))
