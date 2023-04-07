@@ -82,3 +82,13 @@ function sums(arr, index = 0) {
 console.log('\nThe array [1,2,3,4,5,6,7,8,9] sums up to be: ', sums([1,2,3,4,5,6,7,8,9]))
 
 // String Reversal function
+
+function reverse(string, index = string.length - 1) {
+
+    if (index < 0) {
+        return "";
+    }
+    return '' + string[index] + reverse(string, index -1)
+}
+
+console.log('\nThe reverse string of "abcdef" is: ', reverse('abcdef'))
