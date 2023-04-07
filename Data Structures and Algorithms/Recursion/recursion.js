@@ -92,3 +92,11 @@ function reverse(string, index = string.length - 1) {
 }
 
 console.log('\nThe reverse string of "abcdef" is: ', reverse('abcdef'))
+
+// String Reversal function (Alternative)
+
+function reverseString(string) {
+
+}
+
+console.log('\nThe reverse string of "abcdef" is (using alt fun): ', reverseString('abcdef'))
