@@ -1,5 +1,1 @@
 # full-stack-developer-notes
-
-
-
-
