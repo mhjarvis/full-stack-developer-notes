@@ -192,9 +192,7 @@ function angram(string) {
     let substringAngrams = angram(string.slice(0, -1))
 
     for(let i = 0; 0 < substringAngrams.length; i++) {
-        for(let j = 0; j < substringAngrams.length; i++) {
-            arr.push('poop')
-        }
+        console.log('test')
     }
     return arr;
 
