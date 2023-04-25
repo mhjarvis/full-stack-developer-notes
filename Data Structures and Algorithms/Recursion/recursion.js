@@ -183,7 +183,22 @@ function testNeww(num) {
 */
 
 function angram(string) {
+    if (string.length === 1) {
+        return string;
+    }
+
+    let arr = [];
+
+    let substringAngrams = angram(string.slice(0, -1))
+
+    for(let i = 0; 0 < substringAngrams.length; i++) {
+        for(let j = 0; j < substringAngrams.length; i++) {
+            arr.push(substringAngrams[j][string[i]])
+        }
+    }
+    return arr;
 
 }
 
 console.log('\nAngram of abcd includes: ', angram('abcd'))
+console.log(angram('abcd'))
