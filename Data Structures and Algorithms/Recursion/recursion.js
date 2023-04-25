@@ -172,3 +172,19 @@ function angram(string) {
 }
 
 console.log('\nAngram of abcd includes: ', angram('abcd'))
+
+
+
+
+
+
+
+function testNeww(num) {
+    if (num === 1) {
+        return 1;
+    }
+
+
+}
+
+console.log('\n', testNeww(1))
