@@ -183,20 +183,27 @@ function testNeww(num) {
 */
 
 function angram(string) {
-    if (string.length === 1) {
+    if (string.length < 2) {
         return string;
     }
 
     let arr = [];
 
-    let substringAngrams = angram(string.slice(0, -1))
+    for (let i = 0; i < string.length; i++) {
+        let char = string[i];
 
-    for(let i = 0; 0 < substringAngrams.length; i++) {
-        console.log('test')
+        if (string.indexOf(char) != i) {
+            continue;
+        }
+
+        let remainingCharacters = string.slice(0, i) +
+        string.slice(i + 1, string.length);
+
+        for (let permutation of angram(remainingCharacters)) {
+            arr.push(char + permutation)
+        }
     }
     return arr;
-
 }
 
-console.log('\nAngram of abcd includes: ', angram('abcd'))
-console.log(angram('abcd'))
+console.log('\nAngram of abcd includes: ', angram('abcdX'))
