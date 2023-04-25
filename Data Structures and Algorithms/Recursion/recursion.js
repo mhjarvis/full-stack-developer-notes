@@ -163,21 +163,7 @@ function numberOfPaths(n) {
 
 console.log('\nThe number of paths for 11 staircases is: ', numberOfPaths(11))
 
-/* Angram Generation 
-
-*/
-
-function angram(string) {
-
-}
-
-console.log('\nAngram of abcd includes: ', angram('abcd'))
-
-
-
-
-
-
+// Another solution is:
 
 function testNeww(num) {
     if (num === 1) {
@@ -188,8 +174,16 @@ function testNeww(num) {
         return 4;
     }
 
-    return testNeww(n - 1)
+    return testNeww(num - 1) + testNeww(num - 2) + testNeww(num - 3);
 
 }
 
-console.log('\n', testNeww(1))
+/* Angram Generation 
+
+*/
+
+function angram(string) {
+
+}
+
+console.log('\nAngram of abcd includes: ', angram('abcd'))
