@@ -182,8 +182,13 @@ console.log('\nAngram of abcd includes: ', angram('abcd'))
 function testNeww(num) {
     if (num === 1) {
         return 1;
+    } else if (num === 2) {
+        return 2;
+    } else if (num === 3) {
+        return 4;
     }
 
+    return testNeww(n - 1)
 
 }
 
