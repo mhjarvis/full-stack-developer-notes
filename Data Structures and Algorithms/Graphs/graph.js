@@ -29,7 +29,7 @@ const graph = {
     f: []
 }
 
-// Depth-First Function
+// DEPTH-FIRST LOOP FUNCTION
 const depthFirstPrint = (graph, source) => {
     const stack = [source];                                 // create a stack that holds each node and starts 
                                                             // with the source node
@@ -42,18 +42,21 @@ const depthFirstPrint = (graph, source) => {
     }
 }
 
-console.log('Depth-first Loop: ')
+console.log('Depth-first Loop: ');
 depthFirstPrint(graph, 'a');        // abcdfce
 
-const depthFirstRecursive = (graph, source) {
+// DEPTH-FIRST RECURSIVE FUNCTION
+const depthFirstRecursive = (graph, source) => {
     console.log(source);
-
+    for (let neighbor of graph[source]) {
+        depthFirstRecursive(graph, neighbor);
+    }
 }
 
 console.log('\nDepth-first Recursive: ');
 depthFirstRecursive(graph, 'a');
 
-// Breadth-First Function
+// BREADTH-FIRST LOOP FUNCTION
 
 const breadthFirstPrint = (graph, source) => {
     const queue = [source];
@@ -70,9 +73,17 @@ const breadthFirstPrint = (graph, source) => {
 console.log('\nBreath-first Loop');
 breadthFirstPrint(graph, 'a');      // abcdef
 
+/*
 
+Acyclic = no cycles, which means that no nodes loop back on themselves or lead back to themselves.
 
+*/
 
+// Check if there is a path using breadth-first traversal
+
+const hasPath = (graph, srsc, dst) => {
+
+}
 
 
 
