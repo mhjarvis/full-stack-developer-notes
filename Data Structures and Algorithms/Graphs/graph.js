@@ -42,7 +42,16 @@ const depthFirstPrint = (graph, source) => {
     }
 }
 
+console.log('Depth-first Loop: ')
 depthFirstPrint(graph, 'a');        // abcdfce
+
+const depthFirstRecursive = (graph, source) {
+    console.log(source);
+
+}
+
+console.log('\nDepth-first Recursive: ');
+depthFirstRecursive(graph, 'a');
 
 // Breadth-First Function
 
@@ -56,10 +65,9 @@ const breadthFirstPrint = (graph, source) => {
             queue.push(neighbor);
         }
     }
-
 }
 
-console.log('\n');
+console.log('\nBreath-first Loop');
 breadthFirstPrint(graph, 'a');      // abcdef
 
 
