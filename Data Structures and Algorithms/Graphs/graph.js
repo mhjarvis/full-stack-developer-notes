@@ -81,10 +81,22 @@ Acyclic = no cycles, which means that no nodes loop back on themselves or lead b
 
 // Check if there is a path using breadth-first traversal
 
-const hasPath = (graph, srsc, dst) => {
+const hasPath = (graph, src, dst) => {
+    // first create a queue to hold the nodes
+    const queue = [src];
 
+    // loop through elements
+    while (queue.length > 0) {
+        let current = queue.shift();
+        if (current == dst) {
+            return true;
+        }
+        for(let i = 0; i < graph[current].length; i++) {
+            queue.push(graph[current][i]);
+        }
+    }
+    return false;
 }
 
-
-
+console.log(hasPath(graph, 'a', 'f'))
   
