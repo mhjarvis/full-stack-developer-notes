@@ -9,6 +9,14 @@ In graphs, you can also have depth-first and breadth-first traversals.
 2. Breadth-First Traversal - from starting point, explore all immediate neighbors to the first node, then follow that behavior. Explore all directions equally. 
     b. Uses a Queue
 
+    A  -->  C
+    |       |
+    v       v
+    B       E
+    |
+    v
+    D  -->  F
+
 */
 
 // Basic graph using an adjacency list
@@ -36,14 +44,23 @@ const depthFirstPrint = (graph, source) => {
 
 depthFirstPrint(graph, 'a');        // abcdfce
 
-//
+// Breadth-First Function
 
+const breadthFirstPrint = (graph, source) => {
+    const queue = [source];
 
+    while(queue.length > 0) {
+        const current = queue.shift();
+        console.log(current);
+        for (let neighbor of graph[current]) {
+            queue.push(neighbor);
+        }
+    }
 
+}
 
-
-
-
+console.log('\n');
+breadthFirstPrint(graph, 'a');      // abcdef
 
 
 
