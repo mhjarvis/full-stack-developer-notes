@@ -99,4 +99,17 @@ const hasPath = (graph, src, dst) => {
 }
 
 console.log(hasPath(graph, 'a', 'f'))
-  
+
+/*
+const hasPathRecursive(graph, src, dst) => {
+    if (src === dst) return true;
+
+    for(let neighbor of graph[src]) {
+        if (hasPathRecursive(graph, neighbor, dst) === true) {
+            return true;
+        }
+    }
+    return false;
+}
+*/
+
