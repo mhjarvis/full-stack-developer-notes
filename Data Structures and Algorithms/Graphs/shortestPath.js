@@ -25,8 +25,10 @@ const edges = [
 const toGraph = (edges) => {
     const graph = {};           // create graph object to hold adjacency list
 
-    for (let edge in edges) {
-        const [a, b] = edge;
+    for (let edge in edges) {   // loop through each edge array
+        const [a, b] = edge;    // assign edge to const
+        if (!(a in graph)) graph[a] = [];
+        if (!(b in graph)) graph[b] = [];
 
     }
 
