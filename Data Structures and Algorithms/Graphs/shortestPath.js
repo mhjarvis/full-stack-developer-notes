@@ -15,6 +15,9 @@ const edges = [
 const toGraph = (edges) => {
     const graph = {};           // create graph object to hold adjacency list
 
+    for (edge in edges) {
+        console.log(edges[edge])
+    }
 
 
 
