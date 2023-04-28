@@ -1,22 +1,26 @@
 /*
 
-
+        x - y
+       /     \
+      w       z
+       \     /
+          v
 
 */
 
 const edges = [
-    ['i', 'j'],
-    ['k', 'i'], 
-    ['m', 'k'],
-    ['k', 'l'],
-    ['o', 'n'],
+    ['w', 'x'],
+    ['x', 'y'], 
+    ['z', 'y'],
+    ['z', 'v'],
+    ['w', 'v'],
 ]
 
 // 1. Create graph object to hold new values
 // 2. Create a loop to loop through each of the edges in 'edges'
 // 3. Assign each [edge] to a const [a, b] or cycle through each edge array with a loop
 // 4. Iterate through each [edge] to test if it is already in the object
-//      a. If not in object, create it with a empty array: graph[a] = []
+//   v    a. If not in object, create it with a empty array: graph[a] = []
 //      b. Do the same with the second element in the array.
 // 5. Add each element to each other
 //      a. Add b to a: graph[a].push(b)
@@ -46,3 +50,4 @@ let x = {
     a: ['b']
 }
 
+ 
