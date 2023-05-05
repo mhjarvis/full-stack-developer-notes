@@ -12,4 +12,14 @@ function sum(a, b) {
 
 module.exports = sum;
 
-// after adding the sua:lfkjq#$)(fu>>>>>>>>>>>>>>)
+// after adding the sum.test.js file, we add the following to package.json:
+
+/*
+
+    {
+    "scripts": {
+        "test": "jest"
+    }
+    }
+
+*/
