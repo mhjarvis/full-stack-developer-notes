@@ -1,4 +1,4 @@
-## Test Driven Development Using Jest
+# Test Driven Development Using Jest
 
 ## Getting Started
 See the file ```sum.js``` for a basic walkthrough to installing Jest, creating a basic function, exporting/importing that function into the ```sum.test.js``` file, and creating the ```package.json``` file in order to run a basic test. 
