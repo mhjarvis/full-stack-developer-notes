@@ -124,3 +124,15 @@ Test wether a particular function throws an error when its called using ```toThr
     });
 
 For additional documentation see: [Jest Documentation - Using Matchers](https://jestjs.io/docs/using-matchers)
+
+## Using Babel
+
+Install dependencies:
+
+    npm install --save-dev babel-jest @babel/core @babel/preset-env
+
+Configure Babel to target your current version of Node by creating a babel.config.js file in the root of your folder.
+
+    module.exports = {
+        presets: [['@babel/preset-env', {targets: {node: 'current'}}]],
+    };
