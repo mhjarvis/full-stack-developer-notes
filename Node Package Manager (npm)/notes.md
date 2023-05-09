@@ -18,7 +18,7 @@ The package walkthrough will allow you to create a package name, vresion, descri
 
     {
     "name": "npm_project",
-    "version": "1.0.0",
+    "version": "1.0.0",     
     "description": "",
     "main": "index.js",
     "scripts": {
@@ -27,3 +27,19 @@ The package walkthrough will allow you to create a package name, vresion, descri
     "author": "",
     "license": "ISC"
     }
+
+Versioning in npm takes the form of semantic versioning (Major Version / Minor Version / Patch Number)  
+
+You can use npm to install programs using: 
+
+    npm install
+
+This will install all packages that are listed in the package.json file as dependencies. These can be found in the node_modules folder. 
+
+You can also install a specific package using:
+
+    npm install <package>
+
+    npm install <package> --save-dev            // creates development dependency
+
+For example, we can install a package (such as moment to help with parsing, validating dates) by typing ```npm install moment```. Once this package is added, it will now depend as a dependency in the package.json file. It also adds a package-lock.json file and adds a 'moment' folder under node_modules.
