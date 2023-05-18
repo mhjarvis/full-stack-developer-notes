@@ -20,15 +20,18 @@ C. Create a ```src``` and ```dist``` directory with the following contents:
 
   4. In the webpack.config.js file:
 
-      ```const path = require('path');
+      const path = require('path');
+
       module.exports = {
         entry: './src/index.js',
         output: {
           filename: 'main.js',
           path: path.resolve(__dirname, 'dist'),
         },
-      };      
-  5. Run the build again with ```npx webpack --config.js```.
+        mode: 'production'
+      };   
+      
+  5. Run the build again with ```npx webpack --config webpack.config.js```.
 
   6. Set up an HTML skeleton inside of dist/index.html with single ```<div id="content">```.
 
