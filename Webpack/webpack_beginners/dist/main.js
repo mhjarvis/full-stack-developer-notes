@@ -1,1 +1,1 @@
-alert("Hello Webpack");
+(()=>{"use strict";console.log("Hello I am Webpack Stupid")})();
