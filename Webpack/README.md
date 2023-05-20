@@ -32,3 +32,5 @@ This will allow us to use our custom command of ```npm run build```. This looks 
 
 At this point we can create a HTML file, link it to dist/main.js, and see if everything works alright. 
 
+## Writing Modular Code
+
