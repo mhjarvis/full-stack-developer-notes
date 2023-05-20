@@ -33,4 +33,13 @@ This will allow us to use our custom command of ```npm run build```. This looks 
 At this point we can create a HTML file, link it to dist/main.js, and see if everything works alright. 
 
 ## Writing Modular Code
+Webpack also allows us to combine multiple files into one. Creating a new file allows us to export its functions from that file and import them into other files in order to use them. We can use:
 
+    export { sayHello }
+
+We can then import this function into another file using:
+
+    import { sayHello } from './greeting.js'
+    sayHello();                                         // use function
+
+Make sure to use a relative file path...as in ```'./file_name'```, otherwise it will look for your file in ```node_modules```. 
