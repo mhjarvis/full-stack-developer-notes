@@ -1,1 +1,1 @@
-(()=>{"use strict";console.log("Hello I am Webpack Stupid")})();
+(()=>{"use strict";console.log("Hello I am a poop")})();

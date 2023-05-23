@@ -10,4 +10,13 @@
     npm install webpack webpack-cli --save-dev
 
 4. Create a ```index.js``` file in a new ```src``` folder.
-5. Create a ```index.html``` file in a new ```dist``` folder.
+5. Create a ```index.html``` file.
+6. Create a ```webpack.config.js``` file in the root folder with the following code:
+
+    module.exports = {
+        watch: true         // for auto updating code and reloading
+        entry: "./src/index.js",
+        output: {
+            filename: "main.js"
+        }
+    }

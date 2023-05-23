@@ -42,4 +42,18 @@ We can then import this function into another file using:
     import { sayHello } from './greeting.js'
     sayHello();                                         // use function
 
-Make sure to use a relative file path...as in ```'./file_name'```, otherwise it will look for your file in ```node_modules```. 
+Make sure to use a relative file path...as in ```'./file_name'```, otherwise it will look for your file in ```node_modules```. The fil extension is also optional.
+
+Now we cwreate a ```webpack.config.js``` file in the root folder with the following code:
+
+    module.exports = {
+        watch: true,
+        entry: "./src/index.js",
+        output: {
+            filename: "main.js"
+        }
+    }
+
+The 'output' location can also be changed to whatever you would like, you just need to step out of the 'dist' folder since this is our default save location for main.js.
+
+** After adding the ```webpack.config.js``` file above with the ```watch: true``` option set, you will need to run ```npm run build``` one more time and it will now track any changes that are made and update your code live.
