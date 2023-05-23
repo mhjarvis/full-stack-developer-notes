@@ -13,10 +13,10 @@
 5. Create a ```index.html``` file.
 6. Create a ```webpack.config.js``` file in the root folder with the following code:
 
-    module.exports = {
+    ```module.exports = {
         watch: true         // for auto updating code and reloading
         entry: "./src/index.js",
         output: {
             filename: "main.js"
         }
-    }
+    }```
