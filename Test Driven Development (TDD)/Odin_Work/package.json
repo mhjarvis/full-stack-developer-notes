@@ -4,8 +4,11 @@
   "description": "",
   "main": "sum.js",
   "scripts": {
-    "test": "jest"
+    "test": "jest",
+    "type": "module"
   },
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "type": "module"
+
 }
