@@ -14,7 +14,7 @@
 
 ## II. Link Your Files
 
-In ```index.html``` include the following skeleton: 
+1. In ```index.html``` include the following skeleton: 
 
     <!DOCTYPE html>
     <html lang="en">
@@ -30,5 +30,21 @@ In ```index.html``` include the following skeleton:
     </body>
     </html>
 
-In ```styles.css``` include the following skeleton:
+2. In ```styles.css``` include the following skeleton:
 
+    '''
+    '''
+    '''
+    '''
+
+3. Create a ```webpack.config.js``` file that includes the following:
+
+    const path = require('path');
+
+    module.exports = {
+      entry: './src/index.js',
+      output: {
+        filename: 'main.js',
+        path: path.resolve(__dirname, 'dist'),
+      },
+    };
