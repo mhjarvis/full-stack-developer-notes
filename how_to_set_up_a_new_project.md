@@ -5,3 +5,5 @@
 1. Run ```npm init``` in the project directory to generate a ```package.json``` file. Use the default values if you like. 
 
 2. Run ```npm install webpack webpack-cli --save-dev``` to install webpack to the ```node_modules``` directory of your project.
+
+3. Add a ```.gitignore``` file to ignore the ```node_modules``` folder when backing up to GitHub. 
