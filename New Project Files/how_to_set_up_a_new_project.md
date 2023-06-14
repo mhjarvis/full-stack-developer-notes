@@ -16,22 +16,11 @@
 
 1. In ```index.html``` grab the text from the html file in this folder.
 
-2. Create a ```webpack.config.js``` file that includes the following:
+2. Create a ```webpack.config.js``` and include the text from the file in this folder.
 
-    const path = require('path');
+3. Run ```npx webpack --config webpack.config.js``` to run the build; this should create the ```main.js``` file in the ```dist``` folder.
 
-    module.exports = {
-        mode: 'production',
-        entry: './src/index.js',
-        output: {
-            filename: 'main.js',
-            path: path.resolve(__dirname, 'dist'),
-        },
-    };
-
-4. Run ```npx webpack --config webpack.config.js``` to run the build; this should create the ```main.js``` file in the ```dist``` folder.
-
-5. Run ```npx webpack --watch``` so you do not have to rerun webpack everytime you make a change.
+4. Run ```npx webpack --watch``` so you do not have to rerun webpack everytime you make a change.
 
 ## III. Add Testing Support
 
