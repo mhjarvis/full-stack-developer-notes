@@ -28,6 +28,7 @@
         }
 
 3. In your ```example.test.js``` files, a basic test looks like the following:
+
         const funcs = require('./example');
 
         describe("addative functions", () => {
