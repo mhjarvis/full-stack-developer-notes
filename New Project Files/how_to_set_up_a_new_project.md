@@ -20,26 +20,26 @@
 1. In ```package.json```, change the ```test``` line to read ```"test": "jest"```.
 2. In your regular ```example.js``` file, export your functions to test as an object:
     
-    module.exports = {
-        add,
-        subtract,
-        multiply,
-        divide
-    }
-    
+        module.exports = {
+            add,
+            subtract,
+            multiply,
+            divide
+        }
+
 3. In your ```example.test.js``` files, a basic test looks like the following:
-    const funcs = require('./example');
+        const funcs = require('./example');
 
-    describe("addative functions", () => {
+        describe("addative functions", () => {
 
-        test('adds numbers correctly', () => {
-            expect(funcs.add(10, 20)).toBe(30);
+            test('adds numbers correctly', () => {
+                expect(funcs.add(10, 20)).toBe(30);
+            })
+
+            test('subtracts numbers correctly', () => {
+                expect(funcs.subtract(10, 20)).toBe(-10);
+            })
         })
-
-        test('subtracts numbers correctly', () => {
-            expect(funcs.subtract(10, 20)).toBe(-10);
-        })
-    })
 
 ## IV. Setup  CSS
 
