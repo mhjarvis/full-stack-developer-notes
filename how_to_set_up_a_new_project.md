@@ -42,9 +42,14 @@
     const path = require('path');
 
     module.exports = {
+      mode: 'production',
       entry: './src/index.js',
       output: {
         filename: 'main.js',
         path: path.resolve(__dirname, 'dist'),
       },
     };
+
+4. Run ```npx webpack --config webpack.config.js``` to run the build; this should create the ```main.js``` file in the ```dist``` folder.
+
+5. Run ```npx webpack --watch``` so you do not have to rerun webpack everytime you make a change.
