@@ -19,12 +19,14 @@
 
 1. In ```package.json```, change the ```test``` line to read ```"test": "jest"```.
 2. In your regular ```example.js``` file, export your functions to test as an object:
+    
     module.exports = {
         add,
         subtract,
         multiply,
         divide
     }
+    
 3. In your ```example.test.js``` files, a basic test looks like the following:
     const funcs = require('./example');
 
