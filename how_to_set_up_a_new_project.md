@@ -30,14 +30,7 @@
     </body>
     </html>
 
-2. In ```styles.css``` include the following skeleton:
-
-    '''
-    '''
-    '''
-    '''
-
-3. Create a ```webpack.config.js``` file that includes the following:
+2. Create a ```webpack.config.js``` file that includes the following:
 
     const path = require('path');
 
