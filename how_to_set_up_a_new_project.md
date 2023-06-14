@@ -113,3 +113,36 @@
 
 2. In your ```styles.css``` file, add the following:
 
+    @import url('./reset.css');
+
+    /*************************************/ 
+    /************** GENERAL **************/
+    /*************************************/ 
+
+    :root {
+        font-size: 10px;
+        font-family: ;
+        
+        /* Color Variables */
+        --white: #000000;       
+    }
+
+    * {
+    /*   outline: 1px solid red;  */  
+    }
+
+    body {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        overflow-x: hidden;
+    }
+
+    main {
+
+    }
+
+    @media (min-width: 800px) {
+        main {
+
+        }
