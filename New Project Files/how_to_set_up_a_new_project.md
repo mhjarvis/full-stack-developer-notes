@@ -19,8 +19,11 @@
 
 1. In ```package.json```, change the ```test``` line to read ```"test": "jest"```.
 2. In order for jest to support ECMAScript, install Babel dependencies:
+
         npm install --save-dev babel-jest @babel/core @babel/preset-env
+
 Then, create a ```babel.config.js``` file in the root of your project with the following content:
+
         module.exports = {
             presets: [['@babel/preset-env', {targets: {node: 'current'}}]],
         };
