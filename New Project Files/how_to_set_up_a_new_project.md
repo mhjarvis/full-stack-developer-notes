@@ -22,13 +22,13 @@
 
         npm install --save-dev babel-jest @babel/core @babel/preset-env
 
-Then, create a ```babel.config.js``` file in the root of your project with the following content:
+3. Then, create a ```babel.config.js``` file in the root of your project with the following content:
 
         module.exports = {
             presets: [['@babel/preset-env', {targets: {node: 'current'}}]],
         };
 
-3. In your regular ```example.js``` file, export your functions to test as an object:
+4. In your regular ```example.js``` file, export your functions to test as an object:
     
         module.exports = {
             add,
@@ -37,7 +37,7 @@ Then, create a ```babel.config.js``` file in the root of your project with the f
             divide
         }
 
-4. In your ```example.test.js``` files, a basic test looks like the following:
+5. In your ```example.test.js``` files, a basic test looks like the following:
 
         const funcs = require('./example');
 
