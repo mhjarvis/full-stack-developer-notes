@@ -9,7 +9,10 @@ body {
     color: #151412
   }
   
-  main { margin: 24px }
+  main { 
+    margin: 24px;
+    display: grid;
+}
   
   img { 
     float: left; 
