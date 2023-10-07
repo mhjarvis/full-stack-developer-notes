@@ -1,5 +1,12 @@
 /** Setup **/
 
+header { grid-area: header }
+article { grid-area: content }
+aside { grid-area: aside }
+.author-details { grid-area: author }
+.plays { grid-area: plays }
+footer { grid-area: footer }
+
 body {
     margin: 0;
     padding: 0;
@@ -12,6 +19,13 @@ body {
   main { 
     margin: 24px;
     display: grid;
+    grid-template-columns: repeat(2, minmax(auto, 1fr)) 250px;
+    grid-template-areas: 
+        "header header header"
+        "content content content"
+        "content content content"
+        "plays . aside"
+        "footer footer footer";
 }
   
   img { 
