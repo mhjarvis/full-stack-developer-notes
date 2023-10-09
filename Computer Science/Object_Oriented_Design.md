@@ -43,3 +43,6 @@ Classes are blueprints for an object. When you initiate an object, you use a cla
 Every object in JavaScript has an internal property called ```[[Prototype]]```; it creates a way for two or more objects to be linked. When you attempt to access a property or method on an object, JavaScript will first search the object itself. After it is not found, it will work up the ```prototype``` chain until the end is reached (```Object.prototype```). All objects inherit the properties/methods of ```Object``` (```Object```'s prototype is set to null). 
 
 This is evident when using an array. The ```push()``` method, for example, is available because when creating an array, the created array inherits these methods from its prototype - ```Array.prototype```. Everything from this prototype is thus inherited.
+
+## Constructor Functions
+
