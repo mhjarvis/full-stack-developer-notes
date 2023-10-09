@@ -50,3 +50,7 @@ This is evident when using an array. The ```push()``` method, for example, is av
 
 ## Constructor Functions
 
+A constructor is a function used to create an object. The constructor is called when the ```new``` word is used during object creation. Constructors are considered entry points in a class, and are good places to perform initializations and start-up tasks. 
+
+If a class is created that does not include a constructor, a default constructor is provided. One constructor always exists. If no constructor is provided, the default constructor will call the constructor of is 'superclass'. Generally, you should always provide a constructor, even if it contains nothing. Not doing so could cause an issue if you later add a constructor but have been relying on the default constructor the whole time. Its always good to know what is in an object.
+
