@@ -12,7 +12,7 @@ An object is defined by two components: attributes and behaviors. Attributes inc
 
 ```Abstraction``` - objects reveal only those internal mechanisms that are necessary to the use of other objects. You hide the background details as to how a function works or its implementation. Think of a gas pedal - it increases speed - you do not need to know about combustion and gas flow to accelerate a car.
 
-## Advantages of OOP
+### Advantages of OOP
 
 * The data and operations that manipulate that data are encapsulated and get transported together (e.g. accross a network). 
 * Encapsulation makes it so an object does not need to reveal all of its attributes and behaviors; this prevents developers for breaking things they need not have access to. 
@@ -38,7 +38,7 @@ Classes are blueprints for an object. When you initiate an object, you use a cla
         }
     }
 
-## Prototypal Inheritance
+### Prototypal Inheritance
 
 Every object in JavaScript has an internal property called ```[[Prototype]]```; it creates a way for two or more objects to be linked. When you attempt to access a property or method on an object, JavaScript will first search the object itself. After it is not found, it will work up the ```prototype``` chain until the end is reached (```Object.prototype```). All objects inherit the properties/methods of ```Object``` (```Object```'s prototype is set to null). 
 
@@ -48,15 +48,18 @@ This is evident when using an array. The ```push()``` method, for example, is av
     Object.setPrototypeOf()
     Object.create(obj)             // set the prototype of the object
 
-## Constructor Functions
+### Constructor Functions
 
 A constructor is a function used to create an object. The constructor is called when the ```new``` word is used during object creation. Constructors are considered entry points in a class, and are good places to perform initializations and start-up tasks. 
 
 If a class is created that does not include a constructor, a default constructor is provided. One constructor always exists. If no constructor is provided, the default constructor will call the constructor of is 'superclass'. Generally, you should always provide a constructor, even if it contains nothing. Not doing so could cause an issue if you later add a constructor but have been relying on the default constructor the whole time. Its always good to know what is in an object.
 
-## Function Overloading
+### Function Overloading
 
 Most OO languages support function overloading - the ability of a single function to have multiple signatures. A function signature is made up of the function name plus the number and type of parameters the function expects. Thus, a single function can have one signature that accepts a single string argument and another that accepts two numeric arguments. The language determines which version of a function to call based on the arguments that are passed in. JavaScript does not support this.
 
 One workaround in JavaScript would be to use conditionals within a constructor that calls one of several prebuilt functions (based on the number of arguments/inputs). 
 
+## Class Design Guidelines
+
+The OO approach to designing classes encapsulates the data and behavior into objects that interact with one another. It is no longer a sequence of events or routines acting on seperate data files. This interaction takes place through the object's public interfaces. Only the absolute minimum needed to use the class should be exposed publicly; the internal workings and the implementation are of no importance to outside users of the class. A change in implementation should not affects a user's application code.
