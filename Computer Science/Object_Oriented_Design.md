@@ -6,15 +6,17 @@ An object is defined by two components: attributes and behaviors. Attributes inc
 
 ```Encapsulation``` - attributes and behaviors are included inside an object and only limited information is exposed. In good OO design, an object should reveal (through public methods) only the interfaces that other objects must have to interact with it. This increases security and reduces risk of data corruption (you can't break what you can't access).
 
-```Inheritance``` - enables a class to inherit the attributes and methods of another class. 
+```Inheritance``` - enables a class to inherit the attributes and methods of another class. This allows you to reuse code when possible and reduce its redundancy. In JavaScript, this is achieved partially via ```prototype```.
+
 ```Polymorphism``` - enables different types of objects to pass through the same interface. Objects can be designed to share behaviours and they can take on more than one form.
+
 ```Abstraction``` - objects reveal only those internal mechanisms that are necessary to the use of other objects. You hide the background details as to how a function works or its implementation. Think of a gas pedal - it increases speed - you do not need to know about combustion and gas flow to accelerate a car.
-```Composition``` - an object is built from other objects.
 
 ## Advantages of OOP
 
 * The data and operations that manipulate that data are encapsulated and get transported together (e.g. accross a network). 
 * Encapsulation makes it so an object does not need to reveal all of its attributes and behaviors; this prevents developers for breaking things they need not have access to. 
+* The ability to break a program into bite-sized problems that can be solved easily.
 
 ## Classes
 
@@ -35,3 +37,9 @@ Classes are blueprints for an object. When you initiate an object, you use a cla
             this.model = mod;
         }
     }
+
+## Prototypal Inheritance
+
+Every object in JavaScript has an internal property called ```[[Prototype]]```; it creates a way for two or more objects to be linked. When you attempt to access a property or method on an object, JavaScript will first search the object itself. After it is not found, it will work up the ```prototype``` chain until the end is reached (```Object.prototype```). All objects inherit the properties/methods of ```Object``` (```Object```'s prototype is set to null). 
+
+This is evident when using an array. The ```push()``` method, for example, is available because when creating an array, the created array inherits these methods from its prototype - ```Array.prototype```. Everything from this prototype is thus inherited.
