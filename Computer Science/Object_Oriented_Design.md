@@ -54,3 +54,9 @@ A constructor is a function used to create an object. The constructor is called 
 
 If a class is created that does not include a constructor, a default constructor is provided. One constructor always exists. If no constructor is provided, the default constructor will call the constructor of is 'superclass'. Generally, you should always provide a constructor, even if it contains nothing. Not doing so could cause an issue if you later add a constructor but have been relying on the default constructor the whole time. Its always good to know what is in an object.
 
+## Function Overloading
+
+Most OO languages support function overloading - the ability of a single function to have multiple signatures. A function signature is made up of the function name plus the number and type of parameters the function expects. Thus, a single function can have one signature that accepts a single string argument and another that accepts two numeric arguments. The language determines which version of a function to call based on the arguments that are passed in. JavaScript does not support this.
+
+One workaround in JavaScript would be to use conditionals within a constructor that calls one of several prebuilt functions (based on the number of arguments/inputs). 
+
