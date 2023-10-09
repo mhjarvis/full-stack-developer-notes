@@ -44,5 +44,9 @@ Every object in JavaScript has an internal property called ```[[Prototype]]```; 
 
 This is evident when using an array. The ```push()``` method, for example, is available because when creating an array, the created array inherits these methods from its prototype - ```Array.prototype```. Everything from this prototype is thus inherited.
 
+    Object.getPrototypeOf()
+    Object.setPrototypeOf()
+    Object.create(obj)             // set the prototype of the object
+
 ## Constructor Functions
 
