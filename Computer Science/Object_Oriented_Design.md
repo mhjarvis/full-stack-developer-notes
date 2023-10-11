@@ -63,3 +63,4 @@ One workaround in JavaScript would be to use conditionals within a constructor t
 ## Class Design Guidelines
 
 The OO approach to designing classes encapsulates the data and behavior into objects that interact with one another. It is no longer a sequence of events or routines acting on seperate data files. This interaction takes place through the object's public interfaces. Only the absolute minimum needed to use the class should be exposed publicly; the internal workings and the implementation are of no importance to outside users of the class. A change in implementation should not affects a user's application code.
+
